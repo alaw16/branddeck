@@ -1,0 +1,16 @@
+.border {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #222;
+  -webkit-box-shadow: inset 0px 0px 43px 14px rgb(249, 66, 58);
+  -moz-box-shadow: inset 0px 0px 43px 14px rgb(249, 66, 58);
+  box-shadow: inset 0px 0px 43px 14px rgb(249, 66, 58); 
+}
+.box {
+  width: 800px;
+  height: 800px;
+  background: red;
+}
