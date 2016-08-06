@@ -1,16 +1,46 @@
-.border {
-  height: 50px;
-  width: 50px;
+body {
+  background: #111;
+  color: white; }
+
+#lists {
+  margin-top: 60px; }
+  #lists div {
+    width: 50%;
+    float: left; }
+    #lists div h2 {
+      font-size: 1.4rem;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 25px; }
+    #lists div ul {
+      list-style-type: none;
+      text-align: center; }
+
+main {
+  width: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
-  background: #222;
-  -webkit-box-shadow: inset 0px 0px 43px 14px rgb(249, 66, 58);
-  -moz-box-shadow: inset 0px 0px 43px 14px rgb(249, 66, 58);
-  box-shadow: inset 0px 0px 43px 14px rgb(249, 66, 58); 
-}
-.box {
-  width: 800px;
-  height: 800px;
-  background: red;
-}
+  bottom: 35px;
+  left: 0; }
+  main #adjectives {
+    margin-left: calc(50% - 170px);
+    margin-bottom: 65px; }
+    main #adjectives #input {
+      float: left;
+      width: 250px;
+      text-align: center;
+      font-weight: bold;
+      text-align: center;
+      font-size: 3.5rem;
+      margin-bottom: 0;
+      border-bottom: solid 3px; }
+    main #adjectives object {
+      float: left;
+      width: 30px;
+      margin: 20px 0 0 15px; }
+    main #adjectives object:nth-of-type(1) {
+      transform: rotate(180deg);
+      margin: 20px 15px 0 0; }
+  main #buttons #icons {
+    margin-left: calc(50% - 90px); }
+  main #buttons img {
+    width: 60px; }
