@@ -3,8 +3,10 @@ body {
   color: white; }
 
 #lists {
-  margin-top: 60px; }
+  height: 70vh;
+  width: 100%; }
   #lists div {
+    padding-top: 60px;
     width: 50%;
     float: left; }
     #lists div h2 {
@@ -15,27 +17,31 @@ body {
       letter-spacing: 1px; }
     #lists div ul {
       list-style-type: none;
-      text-align: center;
       font-size: 1.2rem;
       letter-spacing: 0.05rem; }
+      #lists div ul li {
+        text-align: center; }
 
 main {
   width: 100%;
-  position: fixed;
-  bottom: 40px;
-  left: 0; }
+  height: 30vh;
+  position: absolute;
+  bottom: 0; }
   main #adjectives {
-    margin-left: calc(50% - 150px);
-    margin-bottom: 50px; }
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 300px;
+    bottom: 150px; }
     main #adjectives p {
       float: left;
-      width: 220px;
+      width: 230px;
       text-align: center;
       font-weight: bold;
       text-align: center;
       font-size: 3.2rem;
-      margin-bottom: 0;
-      border-bottom: solid 3px; }
+      border-bottom: solid 3px;
+      margin: 0 20px 0 20px; }
     main #adjectives #input {
       display: block; }
     main #adjectives #input2 {
@@ -46,17 +52,63 @@ main {
       display: none !important; }
     main #adjectives svg {
       float: left;
-      width: 15px;
-      margin: 20px 0 0 25px; }
+      width: 15px; }
+      main #adjectives svg:hover {
+        cursor: pointer; }
     main #adjectives svg:nth-of-type(1) {
-      transform: rotate(180deg);
-      margin: 20px 25px 0 0; }
-  main #buttons #icons {
-    margin-left: calc(50% - 75px); }
-  main #buttons svg {
-    width: 40px; }
-    main #buttons svg:hover {
-      cursor: pointer; }
-  main #buttons svg:nth-of-type(2) {
-    width: 30px;
-    padding: 0 22px 14px 22px; }
+      transform: rotate(180deg); }
+  main #icons {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 30px; }
+    main #icons svg {
+      width: 40px; }
+      main #icons svg:hover {
+        cursor: pointer; }
+    main #icons svg:nth-of-type(2) {
+      width: 30px;
+      padding: 0 22px 14px 22px; }
+
+@media only screen and (min-width: 800px) {
+  main {
+    width: 100%;
+    height: 30vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); }
+    main #adjectives {
+      width: 540px; }
+      main #adjectives p {
+        width: 400px;
+        font-size: 5rem;
+        margin: 0 50px; }
+      main #adjectives svg {
+        margin-top: 30px;
+        width: 20px; }
+
+  #lists {
+    height: 100vh;
+    padding-top: 20vh;
+    position: absolute;
+    right: 5%;
+    width: auto; }
+    #lists div {
+      float: left;
+      clear: both;
+      height: 40vh;
+      width: 100%;
+      padding-top: 0; }
+      #lists div h2 {
+        font-size: 1.4rem;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 25px;
+        letter-spacing: 1px; }
+      #lists div ul {
+        list-style-type: none;
+        text-align: center;
+        font-size: 1.2rem;
+        letter-spacing: 0.05rem; } }
