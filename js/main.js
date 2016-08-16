@@ -51,7 +51,7 @@ $("#yes").on('click', function() {
 	words.splice(i,1);
 
 	//push content of main > p to arent
-	are.push($('main p').text());
+	are.push($('.push').text());
 
 	$('#are').append('<li>' + lastAre + '</li>');
 });
