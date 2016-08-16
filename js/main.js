@@ -12,10 +12,10 @@ words[3] = ['Practicle','Imaginative'];
 var i = 0,
 	n = words.length;
 
-updateLength = function() {
+var updateLength = function() {
 	var newLength = words.length;
 	return newLength;
-}
+};
 
 $("#forward").data('dir', 1);
 $("#back").data('dir', -1);
@@ -37,32 +37,34 @@ $("#back").trigger('click'); //initialize
 var arent = [],
 	are = [];
 
-$("#no").on('click', function() {
-	var lastArent;
-	//removing the current index value from the array
-	words.splice(i,1);
-	//push content of main > p to arent
-	arent.push($('.push').text());
-	//append text of span to li
-	if (arent.length < 1) {
-    	lastArent = arent[0];
-	}else {
-	    lastArent = arent[arent.length-1];
-	}
-	$('#arent').append('<li>' + lastArent + '</li>');
+$("#no").on('click keyup', function(e) {
+	if (e.keyCode === 37 || e.type === 'click') {
+		var lastArent;
+		//removing the current index value from the array
+		words.splice(i,1);
+		//push content of main > p to arent
+		arent.push($('.push').text());
+		//append text of span to li
+		if (arent.length < 1) {
+	    	lastArent = arent[0];
+		}else {
+		    lastArent = arent[arent.length-1];
+		}
+		$('#arent').append('<li>' + lastArent + '</li>');
 
-	n = updateLength(); //update length of n
+		n = updateLength(); //update length of n
 
-	//if end of word array, start from beginning
-	if (i >= (n-1)) {
-		i=0;
-		$("#input").hide().html(words[0][0]).fadeIn(200);
-		$("#input2").hide().html(words[0][1]).fadeIn(200);
-	}
-	// else, go to next word
-	else {
-		$("#input").hide().html(words[i][0]).fadeIn(200);
-		$("#input2").hide().html(words[i][1]).fadeIn(200);
+		//if end of word array, start from beginning
+		if (i >= (n-1)) {
+			i=0;
+			$("#input").hide().html(words[0][0]).fadeIn(200);
+			$("#input2").hide().html(words[0][1]).fadeIn(200);
+		}
+		// else, go to next word
+		else {
+			$("#input").hide().html(words[i][0]).fadeIn(200);
+			$("#input2").hide().html(words[i][1]).fadeIn(200);
+		}
 	}
 });
 
