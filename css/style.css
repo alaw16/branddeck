@@ -52,7 +52,8 @@ main {
       display: none !important; }
     main #adjectives svg {
       float: left;
-      width: 15px; }
+      width: 15px;
+      margin-top: 15px; }
       main #adjectives svg:hover {
         cursor: pointer; }
     main #adjectives svg:nth-of-type(1) {
