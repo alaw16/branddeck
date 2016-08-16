@@ -12,6 +12,11 @@ words[3] = ['Practicle','Imaginative'];
 var i = 0,
 	n = words.length;
 
+updateLength = function() {
+	var newLength = words.length;
+	return newLength;
+}
+
 $("#forward").data('dir', 1);
 $("#back").data('dir', -1);
 
@@ -45,6 +50,20 @@ $("#no").on('click', function() {
 	    lastArent = arent[arent.length-1];
 	}
 	$('#arent').append('<li>' + lastArent + '</li>');
+
+	updateLength(); //update length of n
+
+	//if end of word array, start from beginning
+	if (i >= (n-1)) {
+		i=0;
+		$("#input").hide().html(words[0][0]).fadeIn(200);
+		$("#input2").hide().html(words[0][1]).fadeIn(200);
+	}
+	// else, go to next word
+	else {
+		$("#input").hide().html(words[i][0]).fadeIn(200);
+		$("#input2").hide().html(words[i][1]).fadeIn(200);
+	}
 });
 
    
@@ -62,6 +81,20 @@ $("#yes").on('click', function() {
 	    lastAre = are[are.length-1];
 	}
 	$('#are').append('<li>' + lastAre + '</li>');
+
+	updateLength(); //update length of n
+
+	//if end of word array, start from beginning
+	if (i >= (n-1)) {
+		i=0;
+		$("#input").hide().html(words[0][0]).fadeIn(200);
+		$("#input2").hide().html(words[0][1]).fadeIn(200);
+	}
+	// else, go to next word
+	else {
+		$("#input").hide().html(words[i][0]).fadeIn(200);
+		$("#input2").hide().html(words[i][1]).fadeIn(200);
+	}
 });
 
 
