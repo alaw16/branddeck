@@ -11,8 +11,6 @@ words[3] = ['Practicle','Imaginative'];
 
 var i = 0,
 	n = words.length;
-var arent = [],
-	are = [];
 
 $("#forward").data('dir', 1);
 $("#back").data('dir', -1);
@@ -31,28 +29,38 @@ $("#flip").on('click', function() {
 $("#back").trigger('click'); //initialize
 
 
+var arent = [],
+	are = [];
 
 $("#no").on('click', function() {
-	var lastArent = arent[arent.length-1];
+	var lastArent;
 	//removing the current index value from the array
 	words.splice(i,1);
-
 	//push content of main > p to arent
 	arent.push($('.push').text());
-
+	//append text of span to li
+	if (arent.length < 1) {
+    	lastArent = arent[0];
+	}else {
+	    lastArent = arent[arent.length-1];
+	}
 	$('#arent').append('<li>' + lastArent + '</li>');
 });
 
    
 
 $("#yes").on('click', function() {
-	var lastAre = are[are.length-1];
+	var lastAre;
 	//removing the current index value from the array
 	words.splice(i,1);
-
 	//push content of main > p to arent
 	are.push($('.push').text());
-
+	//append text of span to li
+	if (are.length < 1) {
+    	lastAre = are[0];
+	}else {
+	    lastAre = are[are.length-1];
+	}
 	$('#are').append('<li>' + lastAre + '</li>');
 });
 
