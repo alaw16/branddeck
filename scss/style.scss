@@ -12,6 +12,7 @@ body {
 			text-align: center;
 			font-weight: bold;
 			margin-bottom: 25px;
+			letter-spacing: 1px;
 		}
 		ul {
 			list-style-type: none;
@@ -25,25 +26,39 @@ main {
 	bottom: 35px;
 	left: 0;
 	#adjectives {
-		margin-left: calc(50% - 170px);
-		#input{
+		margin-left: calc(50% - 155px);
+		p {
 			float:left;
-			width: 250px;
+			width: 220px;
 			text-align: center;
 			font-weight: bold;
 			text-align: center;
-			font-size: 3.5rem;
+			font-size: 3.2rem;
 			margin-bottom: 0;
 			border-bottom: solid 3px;
 		}
-		object {
-			float:left;
-			width: 30px;
-			margin: 20px 0 0 15px;
+		#input{
+			display: block;			
 		}
-		object:nth-of-type(1) {
+		#input2{
+			display: block;
+		}
+		#flip {
+			&:hover {
+				cursor:pointer;
+			}
+		}
+		.switchout {
+			display: none !important;
+		}
+		svg {
+			float:left;
+			width: 20px;
+			margin: 20px 0 0 25px;
+		}
+		svg:nth-of-type(1) {
 			transform: rotate(180deg);
-			margin: 20px 15px 0 0;
+			margin: 20px 25px 0 0;
 		}
 		margin-bottom: 65px;
 	}
@@ -51,8 +66,15 @@ main {
 		#icons {
 			margin-left: calc(50% - 90px);
 		}
-		img {
+		svg {
 			width: 60px;
+			&:hover {
+				cursor:pointer;
+			}
+		}
+		svg:nth-of-type(2) {
+			width: 36px;
+			padding: 0 12px 22px 12px;
 		}
 	}
 }

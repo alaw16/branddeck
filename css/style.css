@@ -11,7 +11,8 @@ body {
       font-size: 1.4rem;
       text-align: center;
       font-weight: bold;
-      margin-bottom: 25px; }
+      margin-bottom: 25px;
+      letter-spacing: 1px; }
     #lists div ul {
       list-style-type: none;
       text-align: center; }
@@ -22,25 +23,38 @@ main {
   bottom: 35px;
   left: 0; }
   main #adjectives {
-    margin-left: calc(50% - 170px);
+    margin-left: calc(50% - 155px);
     margin-bottom: 65px; }
-    main #adjectives #input {
+    main #adjectives p {
       float: left;
-      width: 250px;
+      width: 220px;
       text-align: center;
       font-weight: bold;
       text-align: center;
-      font-size: 3.5rem;
+      font-size: 3.2rem;
       margin-bottom: 0;
       border-bottom: solid 3px; }
-    main #adjectives object {
+    main #adjectives #input {
+      display: block; }
+    main #adjectives #input2 {
+      display: block; }
+    main #adjectives #flip:hover {
+      cursor: pointer; }
+    main #adjectives .switchout {
+      display: none !important; }
+    main #adjectives svg {
       float: left;
-      width: 30px;
-      margin: 20px 0 0 15px; }
-    main #adjectives object:nth-of-type(1) {
+      width: 20px;
+      margin: 20px 0 0 25px; }
+    main #adjectives svg:nth-of-type(1) {
       transform: rotate(180deg);
-      margin: 20px 15px 0 0; }
+      margin: 20px 25px 0 0; }
   main #buttons #icons {
     margin-left: calc(50% - 90px); }
-  main #buttons img {
+  main #buttons svg {
     width: 60px; }
+    main #buttons svg:hover {
+      cursor: pointer; }
+  main #buttons svg:nth-of-type(2) {
+    width: 36px;
+    padding: 0 12px 22px 12px; }
