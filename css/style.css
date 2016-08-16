@@ -15,16 +15,18 @@ body {
       letter-spacing: 1px; }
     #lists div ul {
       list-style-type: none;
-      text-align: center; }
+      text-align: center;
+      font-size: 1.2rem;
+      letter-spacing: 0.05rem; }
 
 main {
   width: 100%;
   position: fixed;
-  bottom: 35px;
+  bottom: 40px;
   left: 0; }
   main #adjectives {
-    margin-left: calc(50% - 155px);
-    margin-bottom: 65px; }
+    margin-left: calc(50% - 150px);
+    margin-bottom: 50px; }
     main #adjectives p {
       float: left;
       width: 220px;
@@ -44,17 +46,17 @@ main {
       display: none !important; }
     main #adjectives svg {
       float: left;
-      width: 20px;
+      width: 15px;
       margin: 20px 0 0 25px; }
     main #adjectives svg:nth-of-type(1) {
       transform: rotate(180deg);
       margin: 20px 25px 0 0; }
   main #buttons #icons {
-    margin-left: calc(50% - 90px); }
+    margin-left: calc(50% - 75px); }
   main #buttons svg {
-    width: 60px; }
+    width: 40px; }
     main #buttons svg:hover {
       cursor: pointer; }
   main #buttons svg:nth-of-type(2) {
-    width: 36px;
-    padding: 0 12px 22px 12px; }
+    width: 30px;
+    padding: 0 22px 14px 22px; }
