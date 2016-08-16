@@ -24,6 +24,7 @@ $("#forward, #back").on('click', function() {
 	i = (i + $(this).data('dir') + n) % n;
 	$("#input").hide().html(words[i][0]).fadeIn(200);
 	$("#input2").hide().html(words[i][1]).fadeIn(200);
+	console.log(i);
 });
 
 $("#flip").on('click', function() {
@@ -51,7 +52,7 @@ $("#no").on('click', function() {
 	}
 	$('#arent').append('<li>' + lastArent + '</li>');
 
-	updateLength(); //update length of n
+	n = updateLength(); //update length of n
 
 	//if end of word array, start from beginning
 	if (i >= (n-1)) {
@@ -64,6 +65,7 @@ $("#no").on('click', function() {
 		$("#input").hide().html(words[i][0]).fadeIn(200);
 		$("#input2").hide().html(words[i][1]).fadeIn(200);
 	}
+	console.log(i);
 });
 
    
@@ -82,7 +84,8 @@ $("#yes").on('click', function() {
 	}
 	$('#are').append('<li>' + lastAre + '</li>');
 
-	updateLength(); //update length of n
+	n = updateLength(); //update length of n
+	console.log(n);
 
 	//if end of word array, start from beginning
 	if (i >= (n-1)) {
@@ -95,6 +98,7 @@ $("#yes").on('click', function() {
 		$("#input").hide().html(words[i][0]).fadeIn(200);
 		$("#input2").hide().html(words[i][1]).fadeIn(200);
 	}
+	console.log(i);
 });
 
 
