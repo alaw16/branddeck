@@ -45,15 +45,13 @@ main {
       margin: 0 20px 0 20px;
       height: 48px; }
     main #adjectives #input {
-      width: 100%;
-      transform: rotate(0deg); }
+      display: block; }
     main #adjectives #input2 {
-      width: 100%;
-      transform: rotate(0deg); }
+      display: block; }
     main #adjectives #flip:hover {
       cursor: pointer; }
     main #adjectives .switchout {
-      transform: rotate(180deg) !important; }
+      display: none !important; }
     main #adjectives svg {
       float: left;
       width: 15px;
