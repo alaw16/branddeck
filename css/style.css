@@ -48,7 +48,7 @@ main {
       font-weight: bold;
       text-align: center;
       font-size: 3.2rem;
-      border-bottom: solid 3px;
+      /*border-bottom: solid 3px;*/
       margin: 0 20px 0 20px;
       height: 48px; }
     main #adjectives #input {
