@@ -43,46 +43,44 @@ $("#back").trigger('click'); //initialize
 var arent = [],
 	are = [];
 
-<<<<<<< Updated upstream
 var flip = function(){
 	$("#input").toggleClass('switchout push');
 	$("#input2").toggleClass('switchout push');
 };
 
-var no = function() {
-=======
-$("body").on('click keyup', function(e) {
-	if (e.keyCode == 37) {
->>>>>>> Stashed changes
-		var lastArent;
-		//removing the current index value from the array
-		words.splice(i,1);
-		//push content of main > p to arent
-		arent.push($('.push').text());
+// var no = function() {
+// $("body").on('click keyup', function(e) {
+// 	if (e.keyCode == 37) {
+// 		var lastArent;
+// 		//removing the current index value from the array
+// 		words.splice(i,1);
+// 		//push content of main > p to arent
+// 		arent.push($('.push').text());
 
-		var opp = $('.switchout').text();
-		//append text of span to li
-		if (arent.length < 1) {
-	    	lastArent = arent[0];
-		}else {
-		    lastArent = arent[arent.length-1];
-		}
-		$('#arent').append('<li data-opposite="' + opp + '" onclick="deleteListItem(this)">' + lastArent + '</li>');
+// 		var opp = $('.switchout').text();
+// 		//append text of span to li
+// 		if (arent.length < 1) {
+// 	    	lastArent = arent[0];
+// 		}else {
+// 		    lastArent = arent[arent.length-1];
+// 		}
+// 		$('#arent').append('<li data-opposite="' + opp + '" onclick="deleteListItem(this)">' + lastArent + '</li>');
 
-		n = updateLength(); //update length of n
+// 		n = updateLength(); //update length of n
 
-		//if end of word array, start from beginning
-		if (i >= (n-1)) {
-			i=0;
-			$("#input").hide().html(words[0][0]).fadeIn(200);
-			$("#input2").hide().html(words[0][1]).fadeIn(200);
-		}
-		// else, go to next word
-		else {
-			$("#input").hide().html(words[i][0]).fadeIn(200);
-			$("#input2").hide().html(words[i][1]).fadeIn(200);
-		}
-};
+// 		//if end of word array, start from beginning
+// 		if (i >= (n-1)) {
+// 			i=0;
+// 			$("#input").hide().html(words[0][0]).fadeIn(200);
+// 			$("#input2").hide().html(words[0][1]).fadeIn(200);
+// 		}
+// 		// else, go to next word
+// 		else {
+// 			$("#input").hide().html(words[i][0]).fadeIn(200);
+// 			$("#input2").hide().html(words[i][1]).fadeIn(200);
+// 		}
+// 	}
+// });
 
 var yes = function() {
 	var lastAre;
@@ -92,7 +90,7 @@ var yes = function() {
 	are.push($('.push').text());
 
 	//flipside var
-	var opp = $('switchout').text();
+	var opp = $('.switchout').text();
 	//append text of span to li
 	if (are.length < 1) {
     	lastAre = are[0];
@@ -153,6 +151,6 @@ deleteListItem = function(currentLi){
 	$(currentLi).remove();
 	words.push([content, flipSide]);
 	n = updateLength();
-}
+};
 
 
