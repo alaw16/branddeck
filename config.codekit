@@ -140,7 +140,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Andrew Lawrence",
+"lastSavedByUser": "Michel DeBauge",
 "manualImportLinks": {
 	},
 "projectAttributes": {
@@ -153,7 +153,7 @@
 	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoApplyPSLanguageSettingsStyle": 0,
-	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
+	"autoprefixerBrowserString": "last 2 versions, Explorer >= 10, Android >= 4.1, Safari >= 7, iOS >= 7",
 	"autoSyncProjectSettingsFile": 1,
 	"browserRefreshDelay": 0,
 	"coffeeAutoOutputPathEnabled": 1,

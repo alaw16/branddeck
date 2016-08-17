@@ -21,19 +21,21 @@ $("#forward").data('dir', 1);
 $("#back").data('dir', -1);
 
 $("#forward, #back").on('click', function() {
-	i = (i + $(this).data('dir') + n) % n;
-	$("#input").hide().html(words[i][0]).fadeIn(200);
-	$("#input2").hide().html(words[i][1]).fadeIn(200);
+	if (n != 0) {
+		i = (i + $(this).data('dir') + n) % n;
+		$("#input").hide().html(words[i][0]).fadeIn(200);
+		$("#input2").hide().html(words[i][1]).fadeIn(200);
+	}
 });
 
 $("body").on('keyup', function(e) {
-	if (e.keyCode === 39) {
-	$( "#forward" ).trigger( "click" );
+	if ((e.keyCode === 39) && (n != 0)) {
+		$( "#forward" ).trigger( "click" );
 	}
 });
 $("body").on('keyup', function(e) {
-	if (e.keyCode === 37) {
-	$( "#back" ).trigger( "click" );
+	if ((e.keyCode === 37) && (n != 0)) {
+		$( "#back" ).trigger( "click" );
 	}
 });
 
@@ -64,9 +66,13 @@ var no = function() {
 		$('#arent').append('<li data-opposite="' + opp + '" onclick="deleteListItem(this)">' + lastArent + '</li>');
 
 		n = updateLength(); //update length of n
-
+		
+		if (n == 0) {
+			$("#input").hide().html('Finished!').fadeIn(200);
+			$("#input2").hide().html('Finished!').fadeIn(200);
+		}	
 		//if end of word array, start from beginning
-		if (i >= (n-1)) {
+		else if (i >= (n-1)) {
 			i=0;
 			$("#input").hide().html(words[0][0]).fadeIn(200);
 			$("#input2").hide().html(words[0][1]).fadeIn(200);
@@ -95,8 +101,12 @@ var yes = function() {
 
 	n = updateLength(); //update length of n
 
+	if (n == 0) {
+			$("#input").hide().html('Finished!').fadeIn(200);
+			$("#input2").hide().html('Finished!').fadeIn(200);
+		}
 	//if end of word array, start from beginning
-	if (i >= (n-1)) {
+	else if (i >= (n-1)) {
 		i=0;
 		$("#input").hide().html(words[0][0]).fadeIn(200);
 		$("#input2").hide().html(words[0][1]).fadeIn(200);
@@ -107,6 +117,8 @@ var yes = function() {
 		$("#input2").hide().html(words[i][1]).fadeIn(200);
 	}
 };
+
+
 
 //FLIP ADJECTIVE
 $("#flip").on('click', function() {
@@ -119,22 +131,27 @@ $("body").on('keyup', function(e) {
 });
 //ADD TO ARENT
 $("#no").on('click', function() {
-	no();	
+	if (n != 0){
+		no();
+	}	
 });
 $("body").on('keyup', function(e) {
-	if (e.keyCode === 40) {
+	if ((e.keyCode === 40) && (n != 0)) {
 		no();
 	}
 });
 //ADD TO ARE
 $("#yes").on('click', function() {
-	yes();
-});
-$("body").on('keyup', function(e) {
-	if (e.keyCode === 38) {
+	if (n != 0) {
 		yes();
 	}
 });
+$("body").on('keyup', function(e) {
+	if ((e.keyCode === 38) && (n != 0)) {
+		yes();
+	}
+});
+
 //FORWARD
 
 //PREVIOUS
