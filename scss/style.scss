@@ -1,7 +1,7 @@
 body {
   background: #111;
   color: white;
- /* -webkit-user-select: none;*/
+  user-select: none;
 }
 .displaynone {
 	visibility: visible;
