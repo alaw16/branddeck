@@ -44,7 +44,7 @@ define('BRANCH', 'master');
  *
  * @var string Full path including the trailing slash
  */
-define('TARGET_DIR', '/home/bigboyllc/branddeck.myyawnis.com/');
+define('TARGET_DIR', '/home/bigboyllc/deck.myyawnis.com/');
 
 /**
  * Whether to delete the files that are not in the repository but are on the
