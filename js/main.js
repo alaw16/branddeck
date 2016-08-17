@@ -38,6 +38,7 @@ var arent = [],
 	are = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 var flip = function(){
 	$("#input").toggleClass('switchout push');
 	$("#input2").toggleClass('switchout push');
@@ -77,6 +78,8 @@ var flip = function(){
 // 	}
 // });
 =======
+=======
+>>>>>>> parent of 4fab323... throw up
 $("#no").on('click keyup', function(e) {
 	if (e.keyCode === 37 || e.type === 'click') {
 		var lastArent;
@@ -109,6 +112,9 @@ $("#no").on('click keyup', function(e) {
 });
 
    
+<<<<<<< HEAD
+>>>>>>> parent of 4fab323... throw up
+=======
 >>>>>>> parent of 4fab323... throw up
 
 $("#yes").on('click', function() {
@@ -142,6 +148,7 @@ $("#yes").on('click', function() {
 		$("#input2").hide().html(words[i][1]).fadeIn(200);
 	}
 });
+<<<<<<< HEAD
 
 deleteListItem = function(currentLi){
 	var content = $(currentLi).html();
@@ -150,5 +157,7 @@ deleteListItem = function(currentLi){
 	words.push([content, flipSide]);
 	n = updateLength();
 };
+=======
+>>>>>>> parent of 4fab323... throw up
 
 
