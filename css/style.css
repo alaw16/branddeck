@@ -34,7 +34,8 @@ main {
   main #adjectives {
     position: absolute;
     left: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
     width: 300px;
     bottom: 150px; }
     main #adjectives p {
@@ -62,11 +63,13 @@ main {
       main #adjectives svg:hover {
         cursor: pointer; }
     main #adjectives svg:nth-of-type(1) {
-      transform: rotate(180deg); }
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
   main #icons {
     position: absolute;
     left: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
     bottom: 30px; }
     main #icons svg {
       width: 40px; }
@@ -87,7 +90,8 @@ main {
     top: 55%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -45%); }
+    -webkit-transform: translate(-50%, -45%);
+            transform: translate(-50%, -45%); }
     main #adjectives {
       width: 690px; }
       main #adjectives p {
