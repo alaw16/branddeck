@@ -2,7 +2,7 @@ var words = [];
 words[0] = ['Budding','Accomplished']; 
 words[1] = ['Curious','Certain']; 
 words[2] = ['Realistic','Idealistic']; 
-words[3] = ['Practicle','Imaginative'];
+words[3] = ['Practical','Imaginative'];
 
 function random_sort () {
       return (0.5 - Math.random() );
@@ -43,24 +43,31 @@ $("#back").trigger('click'); //initialize
 var arent = [],
 	are = [];
 
+<<<<<<< Updated upstream
 var flip = function(){
 	$("#input").toggleClass('switchout push');
 	$("#input2").toggleClass('switchout push');
 };
 
 var no = function() {
+=======
+$("body").on('click keyup', function(e) {
+	if (e.keyCode == 37) {
+>>>>>>> Stashed changes
 		var lastArent;
 		//removing the current index value from the array
 		words.splice(i,1);
 		//push content of main > p to arent
 		arent.push($('.push').text());
+
+		var opp = $('.switchout').text();
 		//append text of span to li
 		if (arent.length < 1) {
 	    	lastArent = arent[0];
 		}else {
 		    lastArent = arent[arent.length-1];
 		}
-		$('#arent').append('<li>' + lastArent + '</li>');
+		$('#arent').append('<li data-opposite="' + opp + '" onclick="deleteListItem(this)">' + lastArent + '</li>');
 
 		n = updateLength(); //update length of n
 
@@ -83,13 +90,16 @@ var yes = function() {
 	words.splice(i,1);
 	//push content of main > p to arent
 	are.push($('.push').text());
+
+	//flipside var
+	var opp = $('switchout').text();
 	//append text of span to li
 	if (are.length < 1) {
     	lastAre = are[0];
 	}else {
 	    lastAre = are[are.length-1];
 	}
-	$('#are').append('<li>' + lastAre + '</li>');
+	$('#are').append('<li data-opposite="' + opp + '" onclick="deleteListItem(this)">' + lastAre + '</li>');
 
 	n = updateLength(); //update length of n
 
@@ -136,5 +146,13 @@ $("body").on('keyup', function(e) {
 //FORWARD
 
 //PREVIOUS
+
+deleteListItem = function(currentLi){
+	var content = $(currentLi).html();
+	var flipSide = $(currentLi).data('opposite');
+	$(currentLi).remove();
+	words.push([content, flipSide]);
+	n = updateLength();
+}
 
 
