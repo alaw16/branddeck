@@ -102,8 +102,8 @@ var yes = function() {
 	n = updateLength(); //update length of n
 
 	if (n == 0) {
-			$("#input").hide().html('Finished!').fadeIn(200);
-			$("#input2").hide().html('Finished!').fadeIn(200);
+			$("#input").hide().html('Complete!').fadeIn(200);
+			$("#input2").hide().html('Complete!').fadeIn(200);
 		}
 	//if end of word array, start from beginning
 	else if (i >= (n-1)) {

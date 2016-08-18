@@ -5,7 +5,9 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  font-family: 'Marcellus', serif; }
+  font-family: 'Marcellus', serif;
+  overflow: hidden;
+  scroll: auto; }
 
 .displaynone {
   visibility: visible; }
@@ -46,7 +48,7 @@ body {
       border: none;
       border-bottom: 2px solid white;
       border-radius: 0;
-      width: 100%;
+      width: 90%;
       padding-top: 35px; }
       #intro #introtext input:focus {
         outline: none; }
@@ -71,10 +73,10 @@ body {
       transition: all 0.5s ease; }
 
 #lists {
-  height: 70vh;
-  width: 100%; }
+  height: 50vh;
+  width: 100%;
+  padding-top: 5vh; }
   #lists div {
-    padding-top: 60px;
     width: 50%;
     float: left; }
     #lists div h2 {
@@ -82,11 +84,16 @@ body {
       text-align: center;
       font-weight: bold;
       margin-bottom: 25px;
-      letter-spacing: 1px; }
+      letter-spacing: 1px;
+      border-bottom: 1px solid white;
+      padding-bottom: 8px;
+      width: 70px;
+      margin: 0 auto; }
     #lists div ul {
       list-style-type: none;
       font-size: 1.2rem;
-      letter-spacing: 0.05rem; }
+      letter-spacing: 0.05rem;
+      padding-top: 15px; }
       #lists div ul li {
         text-align: center; }
         #lists div ul li:hover {
@@ -103,7 +110,7 @@ main {
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
     width: 300px;
-    bottom: 150px; }
+    bottom: 23vh; }
     main #adjectives #brandname {
       font-size: 1.35rem;
       letter-spacing: 0.03rem;
@@ -124,7 +131,7 @@ main {
       display: block;
       color: white;
       position: absolute;
-      top: 11%;
+      top: 36%;
       left: 50%;
       margin-right: -50%;
       -webkit-transform: translate(-50%, 0);
@@ -135,7 +142,7 @@ main {
       display: block;
       color: white;
       position: absolute;
-      top: 11%;
+      top: 36%;
       left: 50%;
       margin-right: -50%;
       -webkit-transform: translate(-50%, 0);
@@ -145,7 +152,7 @@ main {
     main #adjectives #flip:hover {
       cursor: pointer; }
     main #adjectives .switchout {
-      color: rgba(255, 255, 255, 0.032) !important;
+      color: rgba(255, 255, 255, 0.028) !important;
       position: absolute !important;
       top: 92% !important;
       -webkit-transition: all 0.2s linear;
@@ -164,7 +171,7 @@ main {
     left: 50%;
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
-    bottom: 30px;
+    bottom: 6vh;
     /*		p {
     			text-align: center;
     			width: 40px;
@@ -195,6 +202,42 @@ main {
             transform: translate(-50%, -52%);
     margin-top: 0; } }
 @media only screen and (min-width: 800px) {
+  #instructions {
+    visibility: visible;
+    position: fixed; }
+    #instructions ul {
+      list-style-type: none;
+      position: fixed;
+      z-index: 999;
+      bottom: -10px;
+      left: 50%;
+      margin-right: -50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      margin-bottom: 0 !important; }
+    #instructions li {
+      /*clear: both;*/
+      float: left; }
+    #instructions li:not(:last-child) {
+      padding-right: 50px; }
+    #instructions p {
+      float: left; }
+    #instructions img {
+      width: 25px;
+      margin-right: 10px;
+      float: left;
+      -webkit-transform: rotateZ(-90deg);
+              transform: rotateZ(-90deg); }
+    #instructions #one img:nth-of-type(2) {
+      -webkit-transform: rotateZ(90deg);
+              transform: rotateZ(90deg); }
+    #instructions #three img:nth-of-type(1) {
+      -webkit-transform: rotateZ(0deg);
+              transform: rotateZ(0deg); }
+    #instructions #three img:nth-of-type(2) {
+      -webkit-transform: rotateZ(180deg);
+              transform: rotateZ(180deg); }
+
   .displaynone {
     visibility: collapse; }
 
@@ -260,11 +303,11 @@ main {
     width: 50%;
     height: 30vh;
     position: absolute;
-    top: 58%;
+    top: 55%;
     left: 50%;
     margin-right: -50%;
-    -webkit-transform: translate(-50%, -42%);
-            transform: translate(-50%, -42%); }
+    -webkit-transform: translate(-50%, -45%);
+            transform: translate(-50%, -45%); }
     main #adjectives {
       width: 655px; }
       main #adjectives h1 {
@@ -280,6 +323,35 @@ main {
         /*	    		margin-top: 30px;
         	    		width: 20px;*/
         display: none; }
+      main #adjectives #input {
+        display: block;
+        color: white;
+        position: absolute;
+        top: 11%;
+        left: 50%;
+        margin-right: -50%;
+        -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear; }
+      main #adjectives #input2 {
+        display: block;
+        color: white;
+        position: absolute;
+        top: 11%;
+        left: 50%;
+        margin-right: -50%;
+        -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear; }
+      main #adjectives #flip:hover {
+        cursor: pointer; }
+      main #adjectives .switchout {
+        position: absolute !important;
+        top: 92% !important;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear; }
 
   #lists {
     padding-top: 20vh;
@@ -301,7 +373,7 @@ main {
         font-size: 1.35rem;
         letter-spacing: 0.08rem; } }
 /*iPhone 4-5s adjustments*/
-@media only screen and (max-width: 325px) {
+@media only screen and (max-width: 400px) {
   #intro #introtext {
     width: 90%;
     margin-left: 5%; }
