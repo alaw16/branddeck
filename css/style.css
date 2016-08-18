@@ -114,9 +114,10 @@ body {
         -webkit-transition: translate 0.5s ease;
         transition: translate 0.5s ease;
         -webkit-animation-duration: 0.5s;
-                animation-duration: 0.5s; }
+                animation-duration: 0.5s;
+        cursor: url(../images/x.svg), auto; }
         #lists div ul li:hover {
-          cursor: pointer; }
+          cursor: url(../images/x.svg), auto; }
 
 main {
   width: 100%;
