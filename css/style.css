@@ -22,10 +22,19 @@ body {
   top: 0;
   z-index: 999;
   background: #111; }
+  #intro #help {
+    width: 33px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px; }
   #intro #introtext {
-    width: 84%;
-    margin-left: 8%;
-    margin-top: 5%;
+    width: 80%;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%, -56%);
+            transform: translate(-50%, -56%);
     overflow: hidden; }
     #intro #introtext h1 {
       text-align: center;
@@ -42,7 +51,7 @@ body {
     #intro #introtext p:nth-of-type(2) {
       padding-top: 12px; }
     #intro #introtext #form {
-      margin-top: 70px; }
+      margin-top: 100px; }
     #intro #introtext input {
       overflow: hidden;
       -webkit-user-select: text;
@@ -54,7 +63,9 @@ body {
       border-bottom: 2px solid white;
       border-radius: 0;
       width: 100%;
-      margin-top: 14px; }
+      text-align: center;
+      font-size: 2.3rem;
+      margin-bottom: 30px; }
       #intro #introtext input:focus {
         outline: none; }
     #intro #introtext ::-webkit-input-placeholder {
@@ -392,13 +403,20 @@ main {
         font-size: 1.35rem;
         letter-spacing: 0.08rem; } }
 /*iPhone 4-5s adjustments*/
-@media only screen and (max-width: 400px) {
-  #intro #introtext {
-    width: 90%;
-    margin-left: 5%; }
-    #intro #introtext h1 {
-      font-size: 3.3rem; }
-    #intro #introtext #smaller {
-      font-size: 1.8rem; }
-    #intro #introtext p {
-      font-size: 1.35rem; } }
+/*@media only screen and (max-width: 400px) {
+	#intro {
+		#introtext {
+			width: 90%;
+			margin-left: 5%;
+			h1 {
+				font-size: 3.3rem;
+			}
+			#smaller {
+				font-size:1.8rem;
+			}
+			p {
+				font-size: 1.35rem;
+			}
+		}
+	}
+}*/
