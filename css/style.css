@@ -132,7 +132,7 @@ main {
       margin: 0 20px 0 20px;
       height: 48px; }
     main #adjectives #input {
-      max-width: 200px;
+      max-width: 240px;
       display: block;
       color: white;
       position: relative;
@@ -144,7 +144,7 @@ main {
       -webkit-transition: all 0.2s linear;
       transition: all 0.2s linear; }
     main #adjectives #input2 {
-      max-width: 200px;
+      max-width: 240px;
       display: block;
       color: white;
       position: absolute;
