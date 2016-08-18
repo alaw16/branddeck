@@ -13,7 +13,7 @@ body {
   visibility: visible; }
 
 #instructions {
-  visibility: collapse; }
+  display: none; }
 
 #intro {
   height: 100vh;
@@ -209,7 +209,7 @@ main {
     margin-top: 0; } }
 @media only screen and (min-width: 800px) {
   #instructions {
-    visibility: visible;
+    display: block;
     position: fixed; }
     #instructions ul {
       list-style-type: none;
