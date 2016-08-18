@@ -127,7 +127,7 @@ main {
 		width: 300px;
 		bottom: 23vh;
 		#brandname {
-			font-size: 1.35rem;
+			font-size: 1.7rem;
 			letter-spacing: 0.03rem;
 			text-align: center;
 			margin-bottom: 0px;
@@ -373,6 +373,9 @@ main {
 	    		width: 20px;*/
 	    		display: none;
 	    	}
+	    	#brandname {
+			font-size: 2rem;
+			}
 	    	#input{
 		    	max-width: initial;
 				display: block;
