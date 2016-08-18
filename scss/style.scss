@@ -132,10 +132,24 @@ main {
 			height: 48px;
 		}
 		#input{
-			display: block;			
+			display: block;
+			color: rgba(255,255,255,1);
+			position: absolute;
+			top:11%;
+			left: 50%;
+			margin-right: -50%;
+			transform: translate(-50%,0);
+			transition: all 0.2s linear;		
 		}
 		#input2{
 			display: block;
+			color: rgba(255,255,255,1);
+			position: absolute;
+			top:11%;
+			left: 50%;
+			margin-right: -50%;
+			transform: translate(-50%,0);
+			transition: all 0.2s linear;
 		}
 		#flip {
 			&:hover {
@@ -143,7 +157,10 @@ main {
 			}
 		}
 		.switchout {
-			display: none !important;
+			color: rgba(255,255,255,0.032) !important;
+			position: absolute !important;
+			top:92% !important;
+			transition: all 0.2s linear;
 		}
 		svg {
 			float:left;
