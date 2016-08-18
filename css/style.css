@@ -147,7 +147,7 @@ main {
       main #icons svg:hover {
         cursor: pointer; }
     main #icons svg:nth-of-type(2) {
-      padding: 0 30px;
+      margin: 0 30px;
       width: 35px; }
     main #icons svg:nth-of-type(3) {
       -webkit-transform: rotate(180deg);
