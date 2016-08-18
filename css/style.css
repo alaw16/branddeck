@@ -50,7 +50,7 @@ body {
       border: none;
       border-bottom: 2px solid white;
       border-radius: 0;
-      width: 80%;
+      width: 100%;
       padding-top: 35px; }
       #intro #introtext input:focus {
         outline: none; }
