@@ -85,7 +85,7 @@ body {
       font-weight: bold;
       margin-bottom: 25px;
       letter-spacing: 1px;
-      border-bottom: 1px solid white;
+      /*border-bottom: 1px solid white;*/
       padding-bottom: 8px;
       width: 70px;
       margin: 0 auto; }
@@ -93,11 +93,15 @@ body {
       list-style-type: none;
       font-size: 1.2rem;
       letter-spacing: 0.05rem;
-      padding-top: 15px; }
+      padding-top: 5px; }
       #lists div ul li {
-        text-align: center; }
+        text-align: center;
+        -webkit-transition: translate 0.5s ease;
+        transition: translate 0.5s ease;
+        -webkit-animation-duration: 0.5s;
+                animation-duration: 0.5s; }
         #lists div ul li:hover {
-          cursor: url("../images/x.png"); }
+          cursor: pointer; }
 
 main {
   width: 100%;
@@ -128,10 +132,11 @@ main {
       margin: 0 20px 0 20px;
       height: 48px; }
     main #adjectives #input {
+      max-width: 200px;
       display: block;
       color: white;
-      position: absolute;
-      top: 36%;
+      position: relative;
+      top: 10%;
       left: 50%;
       margin-right: -50%;
       -webkit-transform: translate(-50%, 0);
@@ -139,10 +144,11 @@ main {
       -webkit-transition: all 0.2s linear;
       transition: all 0.2s linear; }
     main #adjectives #input2 {
+      max-width: 200px;
       display: block;
       color: white;
       position: absolute;
-      top: 36%;
+      top: 10%;
       left: 50%;
       margin-right: -50%;
       -webkit-transform: translate(-50%, 0);
@@ -214,7 +220,13 @@ main {
       margin-right: -50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
-      margin-bottom: 0 !important; }
+      margin-bottom: 0 !important;
+      -webkit-transition: bottom 1.5s ease;
+      transition: bottom 1.5s ease; }
+    #instructions .down {
+      bottom: -130px !important;
+      -webkit-transition: bottom 1.5s ease;
+      transition: bottom 1.5s ease; }
     #instructions li {
       /*clear: both;*/
       float: left; }
@@ -328,10 +340,11 @@ main {
         	    		width: 20px;*/
         display: none; }
       main #adjectives #input {
+        max-width: initial;
         display: block;
         color: white;
         position: absolute;
-        top: 11%;
+        top: -10%;
         left: 50%;
         margin-right: -50%;
         -webkit-transform: translate(-50%, 0);
@@ -339,10 +352,11 @@ main {
         -webkit-transition: all 0.2s linear;
         transition: all 0.2s linear; }
       main #adjectives #input2 {
+        max-width: initial;
         display: block;
         color: white;
         position: absolute;
-        top: 11%;
+        top: -10%;
         left: 50%;
         margin-right: -50%;
         -webkit-transform: translate(-50%, 0);

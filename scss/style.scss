@@ -89,7 +89,7 @@ body {
 			font-weight: bold;
 			margin-bottom: 25px;
 			letter-spacing: 1px;
-			border-bottom: 1px solid white;
+			/*border-bottom: 1px solid white;*/
 			padding-bottom: 8px;
 			width: 70px;
 			margin: 0 auto;
@@ -98,11 +98,13 @@ body {
 			list-style-type: none;
 			font-size: 1.2rem;
     		letter-spacing: 0.05rem;
-    		padding-top: 15px;
+    		padding-top: 5px;
     		li {
     			text-align: center;
+    			transition: translate 0.5s ease;
+    			animation-duration: 0.5s;
     			&:hover {
-    				cursor: url("../images/x.png");
+    				cursor: pointer;
     			}
     		}
 		}
@@ -139,20 +141,22 @@ main {
 			height: 48px;
 		}
 		#input{
+			max-width: 200px;
 			display: block;
 			color: rgba(255,255,255,1);
-			position: absolute;
-			top:36%;
+			position: relative;
+			top:10%;
 			left: 50%;
 			margin-right: -50%;
 			transform: translate(-50%,0);
 			transition: all 0.2s linear;		
 		}
 		#input2{
+			max-width: 200px;
 			display: block;
 			color: rgba(255,255,255,1);
 			position: absolute;
-			top:36%;
+			top:10%;
 			left: 50%;
 			margin-right: -50%;
 			transform: translate(-50%,0);
@@ -235,6 +239,11 @@ main {
 		margin-right: -50%;
 		transform: translate(-50%,-50%);
 		margin-bottom: 0 !important;
+		transition: bottom 1.5s ease;
+	}
+	.down {
+		bottom: -130px !important;
+		transition: bottom 1.5s ease;
 	}
 	li {
 		/*clear: both;*/
@@ -364,20 +373,22 @@ main {
 	    		display: none;
 	    	}
 	    	#input{
+	    	max-width: initial;
 			display: block;
 			color: rgba(255,255,255,1);
 			position: absolute;
-			top:11%;
+			top:-10%;
 			left: 50%;
 			margin-right: -50%;
 			transform: translate(-50%,0);
 			transition: all 0.2s linear;		
 			}
 			#input2{
+				max-width: initial;
 				display: block;
 				color: rgba(255,255,255,1);
 				position: absolute;
-				top:11%;
+				top:-10%;
 				left: 50%;
 				margin-right: -50%;
 				transform: translate(-50%,0);
