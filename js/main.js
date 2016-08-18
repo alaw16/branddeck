@@ -158,10 +158,11 @@ $("#start").on('click', function() {
 	if (input.length > 0) {
 	$('#brandname').append('<span>' + input + '<i> is</i>' + '</span>').text();
 	$('#intro').fadeOut(500);
-	$('#input, #input2').css('top', '11%');
+	$('#brandname').css('color', '#fff');
 	} else {
-	$('#brandname').append('<span>' + input + '</span>').text();
+	$('#brandname').append('<span>' + input + '<i> is</i>' + '</span>').text();
 	$('#intro').fadeOut(500);
+	$('#brandname').css('color', '#111');
 	}
 	
 });

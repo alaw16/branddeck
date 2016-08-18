@@ -146,8 +146,8 @@ main {
 			max-width: 240px;
 			display: block;
 			color: rgba(255,255,255,1);
-			position: relative;
-			top:10%;
+			position: absolute;
+			top:36%;
 			left: 50%;
 			margin-right: -50%;
 			transform: translate(-50%,0);
@@ -158,7 +158,7 @@ main {
 			display: block;
 			color: rgba(255,255,255,1);
 			position: absolute;
-			top:10%;
+			top:36%;
 			left: 50%;
 			margin-right: -50%;
 			transform: translate(-50%,0);
@@ -375,22 +375,22 @@ main {
 	    		display: none;
 	    	}
 	    	#input{
-	    	max-width: initial;
-			display: block;
-			color: rgba(255,255,255,1);
-			position: absolute;
-			top:-10%;
-			left: 50%;
-			margin-right: -50%;
-			transform: translate(-50%,0);
-			transition: all 0.2s linear;		
+		    	max-width: initial;
+				display: block;
+				color: rgba(255,255,255,1);
+				position: absolute;
+				top:11%;
+				left: 50%;
+				margin-right: -50%;
+				transform: translate(-50%,0);
+				transition: all 0.2s linear;		
 			}
 			#input2{
 				max-width: initial;
 				display: block;
 				color: rgba(255,255,255,1);
 				position: absolute;
-				top:-10%;
+				top:11%;
 				left: 50%;
 				margin-right: -50%;
 				transform: translate(-50%,0);
