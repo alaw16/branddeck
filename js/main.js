@@ -181,7 +181,7 @@ $('body').keyup(function() {
         function() {
             $('#instructions ul').addClass('down');
         },
-        10000);
+        15000);
 });
 
 
