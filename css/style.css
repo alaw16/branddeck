@@ -221,9 +221,10 @@ main {
     #instructions li:not(:last-child) {
       padding-right: 50px; }
     #instructions p {
-      float: left; }
+      float: left;
+      margin-top: 2px; }
     #instructions img {
-      width: 25px;
+      height: 28px;
       margin-right: 10px;
       float: left;
       -webkit-transform: rotateZ(-90deg);
@@ -231,6 +232,9 @@ main {
     #instructions #one img:nth-of-type(2) {
       -webkit-transform: rotateZ(90deg);
               transform: rotateZ(90deg); }
+    #instructions #two img {
+      -webkit-transform: rotateZ(0deg);
+              transform: rotateZ(0deg); }
     #instructions #three img:nth-of-type(1) {
       -webkit-transform: rotateZ(0deg);
               transform: rotateZ(0deg); }
@@ -259,7 +263,7 @@ main {
       font-size: 3rem;
       letter-spacing: 0.07rem; }
     #intro #introtext p {
-      padding-top: 40px;
+      padding-top: 30px;
       font-size: 1.5rem;
       line-height: 1.5;
       margin-bottom: 0; }
