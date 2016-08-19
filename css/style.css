@@ -8,6 +8,25 @@ body {
   overflow: hidden;
   scroll: auto;
   font-family: 'Marcellus'; }
+  body ::-webkit-scrollbar {
+    width: 3px;
+    height: 2px; }
+  body ::-webkit-scrollbar-thumb {
+    background: white; }
+  body ::-webkit-scrollbar-thumb:hover {
+    background: white; }
+  body ::-webkit-scrollbar-thumb:active {
+    background: #000000; }
+  body ::-webkit-scrollbar-track {
+    background: #666666;
+    border: 0px none #ffffff;
+    border-radius: 0px; }
+  body ::-webkit-scrollbar-track:hover {
+    background: #666666; }
+  body ::-webkit-scrollbar-track:active {
+    background: #333333; }
+  body ::-webkit-scrollbar-corner {
+    background: transparent; }
 
 .displaynone {
   visibility: visible; }
@@ -141,7 +160,7 @@ nav {
         transition: translate 0.5s ease;
         -webkit-animation-duration: 0.5s;
                 animation-duration: 0.5s;
-        cursor: url(../images/x.svg), auto;
+        cursor: url(../images/x.png), auto;
         line-height: 1.2; }
 
 main {
@@ -436,15 +455,15 @@ main {
       height: 45vh;
       width: 100%;
       padding-top: 0;
-      overflow: scroll !important;
+      overflow-y: scroll !important;
       z-index: 3; }
       #lists div .shadow {
         position: fixed;
         z-index: 4;
         box-shadow: inset 0 -10vh 8vh #111;
         height: 45.2vh;
-        width: 160px;
-        right: 10px; }
+        width: 140px;
+        /*right: 10px;*/ }
       #lists div h2 {
         font-size: 1.8rem;
         letter-spacing: 1px; }
