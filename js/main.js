@@ -227,7 +227,7 @@ $('body').keyup(function() {
         function() {
             $('#instructions ul').addClass('down');
         },
-        15000);
+        100);
 });
 
 
