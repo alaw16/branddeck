@@ -9,18 +9,15 @@ body {
   scroll: auto;
   font-family: 'Marcellus'; }
   body ::-webkit-scrollbar {
-    width: 3px;
-    height: 2px; }
+    width: 2px; }
   body ::-webkit-scrollbar-thumb {
-    background: white; }
+    background: #888; }
   body ::-webkit-scrollbar-thumb:hover {
     background: white; }
   body ::-webkit-scrollbar-thumb:active {
     background: #000000; }
   body ::-webkit-scrollbar-track {
-    background: #666666;
-    border: 0px none #ffffff;
-    border-radius: 0px; }
+    background: #1d1d1d; }
   body ::-webkit-scrollbar-track:hover {
     background: #666666; }
   body ::-webkit-scrollbar-track:active {
@@ -132,10 +129,10 @@ nav {
   width: 100%;
   padding-top: 90px;
   overflow: scroll; }
-  #lists div {
+  #lists .wordcontainer {
     width: 50%;
     float: left; }
-    #lists div h2 {
+    #lists .wordcontainer h2 {
       font-size: 1.8rem;
       text-align: center;
       font-weight: bold;
@@ -145,23 +142,30 @@ nav {
       padding: 0 0 5px 5px;
       width: 70px;
       margin: 0 auto; }
-    #lists div ul {
+    #lists .wordcontainer ul {
+      overflow-x: hidden;
       list-style-type: none;
       font-size: 1.3rem;
       letter-spacing: 0.05rem;
       padding-top: 5px; }
-      #lists div ul li:first-child {
+      #lists .wordcontainer ul li:first-child {
         padding-top: 8px; }
-      #lists div ul li:last-child {
+      #lists .wordcontainer ul li:last-child {
         padding-bottom: 90px; }
-      #lists div ul li {
+      #lists .wordcontainer ul li {
         text-align: center;
         -webkit-transition: translate 0.5s ease;
         transition: translate 0.5s ease;
         -webkit-animation-duration: 0.5s;
                 animation-duration: 0.5s;
-        cursor: url(../images/x.png), auto;
-        line-height: 1.2; }
+        cursor: url(../images/x.png) 20 15, auto;
+        line-height: 1.2;
+        -webkit-transform: scale(0.9);
+                transform: scale(0.9);
+        cursor: -webkit-image-set(url(../images/x.png) 1x, url(../images/x.png) 2x), auto; }
+        #lists .wordcontainer ul li:hover {
+          -webkit-transform: scale(1);
+                  transform: scale(1); }
 
 main {
   width: 100%;
@@ -270,6 +274,11 @@ main {
             transform: translate(-50%, -52%);
     margin-top: 0; } }
 @media only screen and (min-width: 800px) {
+  nav {
+    background: transparent; }
+    nav h1 {
+      margin-top: 30px; }
+
   #instructions {
     display: block;
     position: fixed; }
@@ -442,38 +451,48 @@ main {
         transition: all 0.2s linear; }
 
   #lists {
-    padding-top: 10vh;
+    padding-top: 60px;
     position: absolute;
-    right: 20px;
-    height: 90vh;
+    right: 50px;
+    height: calc(100vh - 60px);
     width: 140px;
     overflow: hidden; }
-    #lists div {
+    #lists .wordcontainer {
       position: relative;
       float: none;
       clear: both;
-      height: 45vh;
+      height: calc(40vh - 30px);
       width: 100%;
       padding-top: 0;
       overflow-y: scroll !important;
-      z-index: 3; }
-      #lists div .shadow {
+      z-index: 3;
+      margin-bottom: 60px; }
+      #lists .wordcontainer .shadow1 {
         position: fixed;
         z-index: 4;
-        box-shadow: inset 0 -10vh 8vh #111;
-        height: 45.2vh;
+        box-shadow: inset 0 -5vh 7vh #111;
+        height: 10vh;
         width: 140px;
-        /*right: 10px;*/ }
-      #lists div h2 {
+        top: calc(30vh + 30px); }
+      #lists .wordcontainer .shadow2 {
+        position: fixed;
+        z-index: 4;
+        box-shadow: inset 0 -5vh 7vh #111;
+        height: 10vh;
+        width: 140px;
+        top: calc(70vh + 60px); }
+      #lists .wordcontainer h2 {
         font-size: 1.8rem;
         letter-spacing: 1px; }
-      #lists div ul {
+      #lists .wordcontainer ul {
         list-style-type: none;
         text-align: center;
         font-size: 1.35rem;
         letter-spacing: 0.08rem; }
-        #lists div ul li:last-child {
-          padding-bottom: 50px; } }
+        #lists .wordcontainer ul li:last-child {
+          padding-bottom: 50px; }
+        #lists .wordcontainer ul li {
+          line-height: 1.6; } }
 /*iPhone 4-5s adjustments*/
 /*@media only screen and (max-width: 400px) {
 	#intro {

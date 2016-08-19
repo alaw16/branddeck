@@ -6,11 +6,10 @@ body {
 	scroll:auto;
 	font-family: 'Marcellus';
 ::-webkit-scrollbar {
-  width: 3px;
-  height: 2px;
+  width: 2px;
 }
 ::-webkit-scrollbar-thumb {
-  background: white;
+  background: #888;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: white;
@@ -19,9 +18,7 @@ body {
   background: #000000;
 }
 ::-webkit-scrollbar-track {
-  background: #666666;
-  border: 0px none #ffffff;
-  border-radius: 0px;
+  background: #1d1d1d;
 }
 ::-webkit-scrollbar-track:hover {
   background: #666666;
@@ -146,7 +143,7 @@ nav {
 	width: 100%;
 	padding-top: 90px;
 	overflow:scroll;
-	div {
+	.wordcontainer {
 		width: 50%;
 		float: left;
 		h2 {
@@ -161,6 +158,7 @@ nav {
 			margin: 0 auto;
 		}
 		ul {
+			overflow-x: hidden;
 			list-style-type: none;
 			font-size: 1.3rem;
     		letter-spacing: 0.05rem;
@@ -175,8 +173,16 @@ nav {
     			text-align: center;
     			transition: translate 0.5s ease;
     			animation-duration: 0.5s;
-    			cursor: url(../images/x.png), auto;
+    			cursor: url(../images/x.png) 20 15, auto;
     			line-height: 1.2;
+    			transform: scale(0.9);
+    			cursor: -webkit-image-set(
+				  url(../images/x.png) 1x,
+				  url(../images/x.png) 2x
+				), auto;
+    			&:hover {
+    				transform: scale(1);
+    			}
     		}
 		}
 	}
@@ -300,9 +306,16 @@ main {
 	}
 }
 @media only screen and (min-width: 800px) {
+	nav {
+		background: transparent;
+		h1 {
+			margin-top: 30px;
+		}
+	}
 	#instructions {
 	display: block;
 	position: fixed;
+
 	ul {
 		list-style-type: none;
 		position: fixed;
@@ -492,28 +505,37 @@ main {
 	    }
 	}
 	#lists {
-		padding-top:10vh;
+		padding-top: 60px;
 		position: absolute;
-		right: 20px;
-		height: 90vh;
+		right: 50px;
+		height: calc(100vh - 60px);
 		width: 140px;
 		overflow:hidden;
-		div {
+		.wordcontainer {
 			position: relative;
 			float: none;
 			clear: both;
-			height: 45vh;
+			height: calc(40vh - 30px);
 			width: 100%;
 			padding-top: 0;
 			overflow-y:scroll !important;
 			z-index: 3;
-			.shadow {
+			margin-bottom: 60px;
+			.shadow1 {
 				position: fixed;
 				z-index: 4;
-				box-shadow: inset 0 -10vh 8vh #111;
-				height: 45.2vh;
+				box-shadow: inset 0 -5vh 7vh #111;
+				height: 10vh;
 				width:140px;
-				/*right: 10px;*/
+				top: calc(30vh + 30px);
+			}
+			.shadow2 {
+				position: fixed;
+				z-index: 4;
+				box-shadow: inset 0 -5vh 7vh #111;
+				height: 10vh;
+				width:140px;
+				top: calc(70vh + 60px);
 			}
 			h2 {
 				font-size: 1.8rem;
@@ -526,6 +548,9 @@ main {
 	    		letter-spacing: 0.08rem;
 	    		li:last-child {
 	    			padding-bottom:50px;
+	    		}
+	    		li {
+	    			line-height: 1.6;
 	    		}
 			}
 		}

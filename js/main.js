@@ -171,7 +171,7 @@ $("#flip").on('click', function() {
 	flip();
 });
 $("body").on('keyup', function(e) {
-	if (e.keyCode === 16) {
+	if (e.keyCode === 32) {
 		flip();
 	}
 });
@@ -213,7 +213,7 @@ $("#start").on('click', function() {
 });
 
 $(document).keypress(function(e) {
-    if(e.which == 13) {
+    if(e.which === 13) {
         var input = $('#introtext input').val();
 		if (input.length > 0) {
 			$('#brandname').append('<span>' + input + '<i> is</i>' + '</span>').text();
