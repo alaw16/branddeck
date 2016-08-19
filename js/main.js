@@ -210,9 +210,24 @@ $("#start").on('click', function() {
 	$('#intro').fadeOut(500);
 	$('#brandname').css('color', '#111');
 	}
-	
 });
 
+$(document).keypress(function(e) {
+    if(e.which == 13) {
+        var input = $('#introtext input').val();
+		if (input.length > 0) {
+			$('#brandname').append('<span>' + input + '<i> is</i>' + '</span>').text();
+			$('#intro').fadeOut(500);
+			$('#brandname').css('color', '#fff');
+			} else {
+			$('#brandname').append('<span>' + input + '<i> is</i>' + '</span>').text();
+			$('#intro').fadeOut(500);
+			$('#brandname').css('color', '#111');
+		}
+    }
+});
+
+//delete Are/Aren't Items
 var deleteListItem = function(currentLi){
 	var content = $(currentLi).html();
 	var flipSide = $(currentLi).data('opposite');
@@ -221,13 +236,15 @@ var deleteListItem = function(currentLi){
 	n = updateLength();
 };
 
+//instructions counter
+var instructionsCounter = 0;
 
-// $('body').keyup(function() {
-// 	setTimeout(
-//         function() {
-//             $('#instructions ul').addClass('down');
-//         },
-//         100);
-// });
-
+$("body").on('keyup', function(e) {
+	if ((e.keyCode === 37) || (e.keyCode === 38) || (e.keyCode === 39) || (e.keyCode === 40)) {
+		instructionsCounter++;
+	}
+	if (instructionsCounter > 8) {
+		$('#instructions ul').addClass('down');
+	}
+});
 
