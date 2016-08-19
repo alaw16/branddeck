@@ -244,7 +244,18 @@ $("body").on('keyup', function(e) {
 		instructionsCounter++;
 	}
 	if (instructionsCounter > 8) {
-		$('#instructions ul').addClass('down');
+		$('#instructions ul, #downbutton').addClass('down');
 	}
+});
+
+$(document).ready(function() {
+
+	var wordcontainer = $("#are");
+	var isScrolledToBottom = wordcontainer.scrollHeight - wordcontainer.clientHeight <= wordcontainer.scrollTop + 1;
+
+	if(isScrolledToBottom) {
+	    wordcontainer.scrollTop = wordcontainer.scrollHeight - wordcontainer.clientHeight;
+	}
+
 });
 
