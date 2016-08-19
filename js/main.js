@@ -250,7 +250,7 @@ $("body").on('keyup', function(e) {
 
 $(document).ready(function() {
 
-	var wordcontainer = $("#are");
+	var wordcontainer = document.getElementById("#are");
 	var isScrolledToBottom = wordcontainer.scrollHeight - wordcontainer.clientHeight <= wordcontainer.scrollTop + 1;
 
 	if(isScrolledToBottom) {

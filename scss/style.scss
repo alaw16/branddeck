@@ -167,7 +167,7 @@ nav {
     			padding-top:8px;
     		}
     		li:last-child {
-    			padding-bottom:90px;
+    			margin-bottom:100px;
     		}
     		li {
     			text-align: center;
@@ -518,7 +518,7 @@ main {
 		right: 50px;
 		height: calc(100vh - 60px);
 		width: 140px;
-		overflow:auto;
+		overflow:hidden;
 		.wordcontainer {
 			position: relative;
 			float: none;
@@ -553,12 +553,12 @@ main {
 			ul {
 				list-style-type: none;
 				text-align: center;
-				font-size: 1.7rem;
+				font-size: 1.5rem;
 	    		letter-spacing: 0.09rem;
 	    		padding-top: 10px;
 	    		height: 100%;
 	    		li {
-	    			line-height: 1.8;
+	    			line-height: 1.6;
 	    		}
 			}
 		}
