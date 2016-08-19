@@ -262,17 +262,20 @@ main {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
 
-@media only screen and (min-width: 500px) {
-  #intro #introtext {
-    width: 480px;
-    margin-left: 0;
-    position: absolute;
-    top: 48%;
-    left: 50%;
-    margin-right: -50%;
-    -webkit-transform: translate(-50%, -52%);
-            transform: translate(-50%, -52%);
-    margin-top: 0; } }
+/*@media only screen and (min-width: 500px) {
+	#intro{
+		#introtext {
+			width: 480px;
+			margin-left: 0;
+			position: absolute;
+			top:48%;
+			left: 50%;
+			margin-right: -50%;
+			transform: translate(-50%,-52%);
+			margin-top: 0;
+		}
+	}
+}*/
 @media only screen and (min-width: 800px) {
   nav {
     background: transparent; }
