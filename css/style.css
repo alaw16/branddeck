@@ -395,11 +395,11 @@ main {
     width: 50%;
     height: 30vh;
     position: absolute;
-    top: 55%;
+    top: 58%;
     left: 50%;
     margin-right: -50%;
-    -webkit-transform: translate(-50%, -45%);
-            transform: translate(-50%, -45%);
+    -webkit-transform: translate(-50%, -42%);
+            transform: translate(-50%, -42%);
     box-shadow: none; }
     main #adjectives {
       width: 655px; }
