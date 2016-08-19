@@ -222,12 +222,12 @@ var deleteListItem = function(currentLi){
 };
 
 
-$('body').keyup(function() {
-	setTimeout(
-        function() {
-            $('#instructions ul').addClass('down');
-        },
-        100);
-});
+// $('body').keyup(function() {
+// 	setTimeout(
+//         function() {
+//             $('#instructions ul').addClass('down');
+//         },
+//         100);
+// });
 
 
