@@ -49,6 +49,11 @@ body {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
+  #instruction-icon:hover {
+    opacity: 0.8; }
+  #instruction-icon:active {
+    background: #fff;
+    color: #111; }
 
 nav {
   width: 100%;

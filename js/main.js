@@ -214,6 +214,7 @@ $("#start").on('click', function() {
 
 $(document).keypress(function(e) {
     if(e.which === 13) {
+    	$('#start').css('background','white').css('color','#111');
         var input = $('#introtext input').val();
 		if (input.length > 0) {
 			$('#brandname').append('<span>' + input + '<i> is</i>' + '</span>').text();
