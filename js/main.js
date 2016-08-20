@@ -238,6 +238,7 @@ var deleteListItem = function(currentLi){
 
 //instructions counter
 var instructionsCounter = 0;
+var iconPressed = false;
 
 $("body").on('keyup', function(e) {
 	if ((e.keyCode === 37) || (e.keyCode === 38) || (e.keyCode === 39) || (e.keyCode === 40)) {
@@ -246,6 +247,11 @@ $("body").on('keyup', function(e) {
 	if (instructionsCounter > 8) {
 		$('#instructions ul, #downbutton').addClass('down');
 	}
+});
+
+$('#instruction-icon').on('click', function() {
+	iconPressed = true;
+	$('#instructions ul, #downbutton').toggleClass('down');
 });
 
 $(document).ready(function() {
