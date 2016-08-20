@@ -116,6 +116,7 @@ var no = function() {
 		if (n === 0) {
 			$("#input").hide().html('Complete!').fadeIn(200);
 			$("#input2").hide().html('Complete!').fadeIn(200);
+			$('#finalize').show();
 		}	
 		//if end of word array, start from beginning
 		else if (i >= (n-1)) {
@@ -150,6 +151,7 @@ var yes = function() {
 	if (n === 0) {
 			$("#input").hide().html('Complete!').fadeIn(200);
 			$("#input2").hide().html('Complete!').fadeIn(200);
+			$('#finalize').show();
 		}
 	//if end of word array, start from beginning
 	else if (i >= (n-1)) {
@@ -265,4 +267,5 @@ $(document).ready(function() {
 	}
 
 });
+
 

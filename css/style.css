@@ -529,7 +529,28 @@ main {
         padding-top: 10px;
         height: 100%; }
         #lists .wordcontainer ul li {
-          line-height: 1.6; } }
+          line-height: 1.6; }
+
+  #finalize {
+    display: none;
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    color: white;
+    text-transform: initial;
+    text-align: center;
+    letter-spacing: 0;
+    font-size: 1.5rem;
+    width: 120px;
+    border: 2px solid white;
+    padding: 0 0 38px 0; }
+    #finalize:hover {
+      color: black;
+      background: white;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease; } }
 /*iPhone 4-5s adjustments*/
 /*@media only screen and (max-width: 400px) {
 	#intro {
