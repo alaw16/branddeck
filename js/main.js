@@ -116,7 +116,6 @@ var no = function() {
 		if (n === 0) {
 			$("#input").hide().html('Complete!').fadeIn(200);
 			$("#input2").hide().html('Complete!').fadeIn(200);
-			$('#finalize').show();
 		}	
 		//if end of word array, start from beginning
 		else if (i >= (n-1)) {
@@ -151,7 +150,6 @@ var yes = function() {
 	if (n === 0) {
 			$("#input").hide().html('Complete!').fadeIn(200);
 			$("#input2").hide().html('Complete!').fadeIn(200);
-			$('#finalize').show();
 		}
 	//if end of word array, start from beginning
 	else if (i >= (n-1)) {
@@ -216,7 +214,6 @@ $("#start").on('click', function() {
 
 $(document).keypress(function(e) {
     if(e.which === 13) {
-    	$('#start').css('background','white').css('color','#111');
         var input = $('#introtext input').val();
 		if (input.length > 0) {
 			$('#brandname').append('<span>' + input + '<i> is</i>' + '</span>').text();
@@ -241,7 +238,6 @@ var deleteListItem = function(currentLi){
 
 //instructions counter
 var instructionsCounter = 0;
-var iconPressed = false;
 
 $("body").on('keyup', function(e) {
 	if ((e.keyCode === 37) || (e.keyCode === 38) || (e.keyCode === 39) || (e.keyCode === 40)) {
@@ -252,14 +248,9 @@ $("body").on('keyup', function(e) {
 	}
 });
 
-$('#instruction-icon').on('click', function() {
-	iconPressed = true;
-	$('#instructions ul, #downbutton').toggleClass('down');
-});
-
 $(document).ready(function() {
 
-	var wordcontainer = document.getElementById("#are");
+	var wordcontainer = $("#are");
 	var isScrolledToBottom = wordcontainer.scrollHeight - wordcontainer.clientHeight <= wordcontainer.scrollTop + 1;
 
 	if(isScrolledToBottom) {
@@ -267,5 +258,4 @@ $(document).ready(function() {
 	}
 
 });
-
 
