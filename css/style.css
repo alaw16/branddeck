@@ -35,25 +35,27 @@ body {
 
 #instruction-icon {
   cursor: pointer;
-  position: fixed;
-  bottom: 4%;
-  left: 3%;
-  border-radius: 50%;
-  border: 2px solid white;
-  padding: 1.5rem;
-  color: white; }
-  #instruction-icon p {
-    font-size: 16px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
-  #instruction-icon:hover {
-    opacity: 0.8; }
-  #instruction-icon:active {
-    background: #fff;
-    color: #111; }
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: white;
+  text-transform: initial;
+  text-align: center;
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  border-bottom: 50px solid #151515;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  width: 100px;
+  padding: 0 0 0 0;
+  -webkit-transition: top 1.5s ease;
+  transition: top 1.5s ease; }
+  #instruction-icon span {
+    position: relative;
+    top: 5px; }
 
 nav {
   width: 100%;
@@ -319,10 +321,13 @@ main {
               transform: translateX(-50%);
       font-family: "Marcellus SC"; }
     #instructions ul {
+      background: #151515;
+      padding: 50px 70px 0 70px;
+      border-radius: 8px 8px 0 0;
       list-style-type: none;
       position: fixed;
       z-index: 999;
-      bottom: 10px;
+      bottom: 0px;
       left: 50%;
       margin-right: -50%;
       -webkit-transform: translateX(-50%);
@@ -331,7 +336,7 @@ main {
       -webkit-transition: bottom 1.5s ease;
       transition: bottom 1.5s ease; }
     #instructions .down {
-      bottom: -130px !important;
+      bottom: -110px !important;
       -webkit-transition: bottom 1.5s ease;
       transition: bottom 1.5s ease; }
     #instructions li {
