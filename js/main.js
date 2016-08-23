@@ -1,3 +1,18 @@
+$(function() {      
+  //Enable swiping...
+  $("body").swipe( {
+    //Generic swipe handler for all directions
+    swipeRight:function() {
+      $('#about').addClass("right");  
+    },
+    swipeLeft:function() {
+      $('#about').removeClass("right");  
+    },
+    
+  });
+});
+
+
 var words = [];
 words[0] = ['Accomplished','Budding']; 
 words[1] = ['Certain','Curious']; 
@@ -252,9 +267,14 @@ $("body").on('keyup', function(e) {
 	}
 });
 
-$('#instruction-icon').on('click', function() {
+// $('#instruction-icon').on('click', function() {
+// 	iconPressed = true;
+// 	$('#instructions ul').toggleClass('right');
+// });
+
+$('#about-icon').on('click', function() {
 	iconPressed = true;
-	$('#instructions ul, #downbutton').toggleClass('down');
+	$('#about').toggleClass('right');
 });
 
 $(document).ready(function() {
