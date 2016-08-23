@@ -33,6 +33,30 @@ body {
 #instructions {
   display: none; }
 
+#instruction-icon {
+  cursor: pointer;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: white;
+  text-transform: initial;
+  text-align: center;
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  border-bottom: 50px solid #151515;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  width: 110px;
+  padding: 0 0 0 0;
+  -webkit-transition: top 1.5s ease;
+  transition: top 1.5s ease; }
+  #instruction-icon span {
+    position: relative;
+    top: 4px; }
+
 .right {
   left: 0% !important;
   -webkit-transition: left 1s ease;
@@ -406,10 +430,13 @@ main {
               transform: translateX(-50%);
       font-family: "Marcellus SC"; }
     #instructions ul {
+      background: #151515;
+      padding: 50px 70px 0 70px;
+      border-radius: 8px 8px 0 0;
       list-style-type: none;
       position: fixed;
       z-index: 999;
-      bottom: 10px;
+      bottom: 0px;
       left: 50%;
       margin-right: -50%;
       -webkit-transform: translateX(-50%);
@@ -418,7 +445,7 @@ main {
       -webkit-transition: bottom 1.5s ease;
       transition: bottom 1.5s ease; }
     #instructions .down {
-      bottom: -130px !important;
+      bottom: -110px !important;
       -webkit-transition: bottom 1.5s ease;
       transition: bottom 1.5s ease; }
     #instructions li {

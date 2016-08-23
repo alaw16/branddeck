@@ -263,14 +263,14 @@ $("body").on('keyup', function(e) {
 		instructionsCounter++;
 	}
 	if (instructionsCounter > 8) {
-		$('#instructions ul, #downbutton').addClass('down');
+		$('#controls').addClass('down');
 	}
 });
 
-// $('#instruction-icon').on('click', function() {
-// 	iconPressed = true;
-// 	$('#instructions ul').toggleClass('right');
-// });
+$('#instruction-icon').on('click', function() {
+	iconPressed = true;
+	$('#controls').toggleClass('down');
+});
 
 $('#about-icon').on('click', function() {
 	iconPressed = true;
