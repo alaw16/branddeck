@@ -69,6 +69,8 @@ words[47] = ['Mysterious','Relatable'];
 words[48] = ['Daring','Adventurous'];
 words[49] = ['Exclusive','Approachable'];
 
+var tracker = words.length;
+
 function random_sort () {
       return (0.5 - Math.random() );
 }
@@ -117,6 +119,8 @@ var flip = function(){
 
 var no = function() {
 		var lastArent;
+		tracker--;
+		$('#current-track').html(tracker);
 		var opp = $('.switchout').text();
 		//removing the current index value from the array
 		words.splice(i,1);
@@ -152,6 +156,8 @@ var no = function() {
 
 var yes = function() {
 	var lastAre;
+	tracker--;
+	$('#current-track').html(tracker);
 	var opp = $('.switchout').text();
 	//removing the current index value from the array
 	words.splice(i,1);
@@ -254,6 +260,9 @@ var deleteListItem = function(currentLi){
 	$(currentLi).remove();
 	words.push([content, flipSide]);
 	n = updateLength();
+
+	tracker++;
+	$('#current-track').html(tracker);
 };
 
 //instructions counter
@@ -289,5 +298,6 @@ $(document).ready(function() {
 	}
 
 });
+
 
 
