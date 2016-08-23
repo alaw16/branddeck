@@ -1,15 +1,3 @@
-//swipe left and right to close and open "how to play"
-$( document ).on( 'pagecreate', 'body', function() {
-    $( document ).on( "swipeleft swiperight", 'body', function( e ) {
-		if ( e.type === "swipeleft"  ) {
-			$( "#about" ).removeClass( "right" );
-		} else if ( e.type === "swiperight" ) {
-			$( "#about" ).addClass( "right" );
-		}
-    });
-});
-
-
 var words = [];
 words[0] = ['Accomplished','Budding']; 
 words[1] = ['Certain','Curious']; 
@@ -264,14 +252,9 @@ $("body").on('keyup', function(e) {
 	}
 });
 
-// $('#instruction-icon').on('click', function() {
-// 	iconPressed = true;
-// 	$('#instructions ul').toggleClass('right');
-// });
-
-$('#about-icon').on('click', function() {
+$('#instruction-icon').on('click', function() {
 	iconPressed = true;
-	$('#about').toggleClass('right');
+	$('#instructions ul, #downbutton').toggleClass('down');
 });
 
 $(document).ready(function() {
