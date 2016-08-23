@@ -1,24 +1,30 @@
 body {
-  background: #111;
-  color: white;
+  background: #cacbd4;
+  color: #1f19e2;
   user-select: none;
   overflow: hidden;
   scroll: auto;
   font-family: 'Marcellus';
   /*::-webkit-scrollbar-thumb:hover {
-    background: white;
+    background: $blue;
+  }*/
+  /*::-webkit-scrollbar-thumb:active {
+    background: #000000;
   }*/
   /*::-webkit-scrollbar-track:hover {
     background: #666666;
   }*/ }
+  body a {
+    color: inherit;
+    font-family: 'Marcellus SC'; }
+    body a:hover {
+      color: #111; }
   body ::-webkit-scrollbar {
-    width: 2px; }
+    width: 1px; }
   body ::-webkit-scrollbar-thumb {
-    background: #888; }
-  body ::-webkit-scrollbar-thumb:active {
-    background: #000000; }
+    background: #1f19e2; }
   body ::-webkit-scrollbar-track {
-    background: #1d1d1d; }
+    background: #bdbec7; }
   body ::-webkit-scrollbar-track:active {
     background: #333333; }
   body ::-webkit-scrollbar-corner {
@@ -36,12 +42,12 @@ body {
   top: -25px;
   left: 50%;
   transform: translateX(-50%);
-  color: white;
+  color: #1f19e2;
   text-transform: initial;
   text-align: center;
   font-size: 1.25rem;
   letter-spacing: 0;
-  border-bottom: 50px solid #151515;
+  border-bottom: 50px solid #c1c2cc;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
   height: 0;
@@ -66,9 +72,9 @@ body {
   top: calc(100% - 23px);
   z-index: 5;
   width: 100%;
-  /*	border-right: 1px solid white;*/
+  /*	border-right: 1px solid $blue;*/
   height: 100vh;
-  background: #151515;
+  background: white;
   transition: all 1s ease; }
   #about h2 {
     text-align: center;
@@ -95,9 +101,9 @@ body {
     top: 0;
     width: 100%;
     height: 20px;
-    background: white;
+    background: #bdbec7;
     text-align: center;
-    color: #111;
+    color: white;
     font-size: 1rem;
     padding: 3px 0 0 0;
     cursor: pointer; }
@@ -109,10 +115,10 @@ body {
   bottom: 27px;
   left: 27px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid #1f19e2;
   padding: 1.5rem;
   z-index: 6;
-  color: white; }
+  color: #1f19e2; }
   #about-icon p {
     font-size: 16px;
     position: absolute;
@@ -131,8 +137,9 @@ nav {
   position: fixed;
   z-index: 4;
   top: 0;
-  /*	border-bottom: solid 1px white;*/
-  background: #111; }
+  /*	border-bottom: solid 1px $blue;*/
+  background: transparent;
+  color: white; }
   nav h1 {
     margin-top: 18px;
     text-align: center;
@@ -152,7 +159,7 @@ nav {
   position: fixed;
   top: 0;
   z-index: 4;
-  background: #111; }
+  background: #cacbd4; }
   #intro img {
     position: absolute;
     width: 50px;
@@ -193,7 +200,7 @@ nav {
       user-select: text;
       background: transparent;
       border: none;
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid #1f19e2;
       border-radius: 0;
       width: 100%;
       text-align: center;
@@ -206,25 +213,26 @@ nav {
       color: #555;
       letter-spacing: 0.03rem; }
     #intro #introtext button {
-      color: white;
+      color: #1f19e2;
       text-transform: initial;
       text-align: center;
       letter-spacing: 0;
       font-size: 1.5rem;
       width: 120px;
       margin-left: calc(50% - 60px);
-      border: 2px solid white;
+      border: 2px solid #1f19e2;
       padding: 0 0 38px 0; }
     #intro #introtext button:hover {
-      color: black;
-      background: white;
+      color: #cacbd4;
+      background: #1f19e2;
       transition: all 0.5s ease; }
 
 #lists {
   height: 50vh;
   width: 100%;
   padding-top: 90px;
-  overflow: scroll; }
+  overflow: scroll;
+  color: #1f19e2; }
   #lists .wordcontainer {
     width: 50%;
     float: left; }
@@ -234,7 +242,7 @@ nav {
       font-weight: bold;
       margin-bottom: 25px;
       letter-spacing: 1px;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid #1f19e2;
       padding: 0 0 5px 5px;
       width: 70px;
       margin: 0 auto; }
@@ -261,10 +269,10 @@ nav {
 main {
   width: 100%;
   height: 36vh;
-  box-shadow: 0 -6vh 10vh #111;
+  box-shadow: 0 -6vh 10vh #cacbd4;
   position: absolute;
   bottom: 0;
-  background: #111; }
+  background: #cacbd4; }
   main #adjectives {
     position: absolute;
     left: 50%;
@@ -276,7 +284,8 @@ main {
       letter-spacing: 0.03rem;
       text-align: center;
       margin-bottom: 0px;
-      line-height: 1.8; }
+      line-height: 1.8;
+      color: #1f19e2; }
     main #adjectives p {
       float: left;
       width: 230px;
@@ -286,11 +295,12 @@ main {
       font-size: 3.2rem;
       /*border-bottom: solid 3px;*/
       margin: 0 20px 0 20px;
-      height: 48px; }
+      height: 48px;
+      color: #1f19e2; }
     main #adjectives #input {
       max-width: 240px;
       display: block;
-      color: white;
+      color: #1f19e2;
       position: absolute;
       top: 36%;
       left: 50%;
@@ -300,7 +310,7 @@ main {
     main #adjectives #input2 {
       max-width: 240px;
       display: block;
-      color: white;
+      color: #1f19e2;
       position: absolute;
       top: 36%;
       left: 50%;
@@ -310,7 +320,7 @@ main {
     main #adjectives #flip:hover {
       cursor: pointer; }
     main #adjectives .switchout {
-      color: rgba(255, 255, 255, 0.028) !important;
+      color: #bfc0ca !important;
       position: absolute !important;
       top: 92% !important;
       transition: all 0.2s linear; }
@@ -375,7 +385,7 @@ main {
     width: 250px;
     padding: 0 27px;
     height: 100vh;
-    background: #151515; }
+    background: white; }
     #about #info {
       display: none; }
     #about h2 {
@@ -389,7 +399,7 @@ main {
       margin-top: 27px;
       padding: 0; }
     #about p {
-      font-size: 13px;
+      font-size: 12px;
       letter-spacing: 0.3px;
       margin-bottom: 12px;
       padding: 0; }
@@ -397,7 +407,7 @@ main {
       text-align: center;
       margin-bottom: 70px; }
     #about #swipeinfo {
-      color: white;
+      color: #1f19e2;
       font-style: italic;
       position: absolute;
       bottom: 65px;
@@ -419,20 +429,21 @@ main {
       transform: translateX(-50%);
       font-family: "Marcellus SC"; }
     #instructions ul {
-      background: #151515;
+      color: white;
+      background: #c1c2cc;
       padding: 50px 70px 0 70px;
       border-radius: 8px 8px 0 0;
       list-style-type: none;
       position: fixed;
       z-index: 999;
-      bottom: 0px;
+      bottom: -1px;
       left: 50%;
       margin-right: -50%;
       transform: translateX(-50%);
       margin-bottom: 0 !important;
       transition: bottom 1.5s ease; }
     #instructions .down {
-      bottom: -110px !important;
+      bottom: -113px !important;
       transition: bottom 1.5s ease; }
     #instructions li {
       /*clear: both;*/
@@ -492,7 +503,7 @@ main {
       user-select: text;
       background: transparent;
       border: none;
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid #1f19e2;
       width: calc(100% - 220px);
       font-size: 3rem;
       /*text-align: left;*/
@@ -503,7 +514,7 @@ main {
       color: #333;
       letter-spacing: 0rem; }
     #intro #introtext button {
-      color: white;
+      color: #1f19e2;
       text-transform: initial;
       text-align: center;
       letter-spacing: 0;
@@ -511,7 +522,7 @@ main {
       width: 170px;
       margin-left: 0;
       float: right;
-      border-color: white;
+      border-color: #1f19e2;
       padding-bottom: 39px;
       transition: all 0.5s ease; }
     #intro #introtext #form {
@@ -536,7 +547,7 @@ main {
         font-size: 8rem;
         margin: 0 50px;
         height: 115px;
-        border-bottom: 3px solid white; }
+        border-bottom: 2px solid #1f19e2; }
       main #adjectives svg {
         /*	    		margin-top: 30px;
         	    		width: 20px;*/
@@ -546,7 +557,6 @@ main {
       main #adjectives #input {
         max-width: initial;
         display: block;
-        color: white;
         position: absolute;
         top: 17%;
         left: 50%;
@@ -556,7 +566,6 @@ main {
       main #adjectives #input2 {
         max-width: initial;
         display: block;
-        color: white;
         position: absolute;
         top: 17%;
         left: 50%;
@@ -590,14 +599,14 @@ main {
       #lists .wordcontainer .shadow1 {
         position: fixed;
         z-index: 4;
-        box-shadow: inset 0 -5vh 7vh #111;
+        box-shadow: inset 0 -5vh 7vh #cacbd4;
         height: 7vh;
         width: 134px;
         top: calc(33vh + 30px); }
       #lists .wordcontainer .shadow2 {
         position: fixed;
         z-index: 4;
-        box-shadow: inset 0 -5vh 7vh #111;
+        box-shadow: inset 0 -5vh 7vh #cacbd4;
         height: 7vh;
         width: 134px;
         top: calc(73vh + 60px); }
@@ -621,17 +630,17 @@ main {
     bottom: -10%;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: #1f19e2;
     text-transform: initial;
     text-align: center;
     letter-spacing: 0;
     font-size: 1.5rem;
     width: 120px;
-    border: 2px solid white;
+    border: 2px solid #1f19e2;
     padding: 0 0 38px 0; }
     #finalize:hover {
       color: black;
-      background: white;
+      background: #1f19e2;
       transition: all 0.5s ease; } }
 /*iPhone 4-5s adjustments*/
 /*@media only screen and (max-width: 400px) {

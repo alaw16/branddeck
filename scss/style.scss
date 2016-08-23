@@ -1,34 +1,44 @@
+$grey: #cacbd4;
+$lgrey: #bdbec7;
+$blue: #1f19e2;
 body {
-	background: #111;
-	color: white;
+	background: $grey;
+	color: $blue;
 	user-select: none;
 	overflow:hidden;
 	scroll:auto;
 	font-family: 'Marcellus';
-::-webkit-scrollbar {
-  width: 2px;
-}
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-/*::-webkit-scrollbar-thumb:hover {
-  background: white;
-}*/
-::-webkit-scrollbar-thumb:active {
-  background: #000000;
-}
-::-webkit-scrollbar-track {
-  background: #1d1d1d;
-}
-/*::-webkit-scrollbar-track:hover {
-  background: #666666;
-}*/
-::-webkit-scrollbar-track:active {
-  background: #333333;
-}
-::-webkit-scrollbar-corner {
-  background: transparent;
-}
+	a {
+		color: inherit;
+		font-family: 'Marcellus SC';
+		&:hover {
+			color:#111;
+		}
+	}
+	::-webkit-scrollbar {
+	  width: 1px;
+	}
+	::-webkit-scrollbar-thumb {
+	  background: $blue;
+	}
+	/*::-webkit-scrollbar-thumb:hover {
+	  background: $blue;
+	}*/
+	/*::-webkit-scrollbar-thumb:active {
+	  background: #000000;
+	}*/
+	::-webkit-scrollbar-track {
+	  background: $lgrey;
+	}
+	/*::-webkit-scrollbar-track:hover {
+	  background: #666666;
+	}*/
+	::-webkit-scrollbar-track:active {
+	  background: #333333;
+	}
+	::-webkit-scrollbar-corner {
+	  background: transparent;
+	}
 }
 .displaynone {
 	visibility: visible;
@@ -42,12 +52,12 @@ body {
 	top: -25px;
 	left: 50%;
 	transform: translateX(-50%);
-	color: white;
+	color: $blue;
 	text-transform: initial;
 	text-align: center;
 	font-size: 1.25rem;
 	letter-spacing: 0;
-	border-bottom: 50px solid #151515;
+	border-bottom: 50px solid #c1c2cc;
 	border-left: 25px solid transparent;
 	border-right: 25px solid transparent;
 	height: 0;
@@ -73,9 +83,9 @@ body {
 	top: calc(100% - 23px);
 	z-index: 5;
 	width: 100%;
-/*	border-right: 1px solid white;*/
+/*	border-right: 1px solid $blue;*/
 	height: 100vh;
-	background: #151515;
+	background: white;
 	transition: all 1s ease;
 	h2 {
 		text-align: center;
@@ -107,9 +117,9 @@ body {
 		top: 0;
 		width: 100%;
 		height: 20px;
-		background: white;
+		background: $lgrey;
 		text-align: center;
-		color: #111;
+		color: white;
 		font-size: 1rem;
 		padding: 3px 0 0 0;
 		cursor: pointer;
@@ -122,10 +132,10 @@ body {
 	bottom: 27px;
 	left: 27px;
 	border-radius: 50%;
-	border: 2px solid white;
+	border: 2px solid $blue;
 	padding: 1.5rem;
 	z-index: 6;
-	color: white;
+	color: $blue;
 	p {
 		font-size: 16px;
 		position: absolute;
@@ -147,8 +157,9 @@ nav {
 	position: fixed;
 	z-index: 4;
 	top: 0;
-/*	border-bottom: solid 1px white;*/
-	background: #111;
+/*	border-bottom: solid 1px $blue;*/
+	background: transparent;
+	color: white;
 	h1 {
 		margin-top: 18px;
 		text-align: center;
@@ -170,7 +181,7 @@ nav {
 	position: fixed;
 	top: 0;
 	z-index: 4;
-	background: #111;
+	background: $grey;
 	img {
 		position: absolute;
 		width: 50px;
@@ -216,7 +227,7 @@ nav {
 			user-select: text;
 			background: transparent;
 			border: none;
-			border-bottom: 2px solid white;
+			border-bottom: 2px solid $blue;
 			border-radius: 0;
 			width: 100%;
 			text-align: center;
@@ -233,19 +244,19 @@ nav {
 			letter-spacing: 0.03rem;
 		}
 		button {
-			color: white;
+			color: $blue;
 			text-transform: initial;
 			text-align: center;
 			letter-spacing: 0;
 			font-size: 1.5rem;
 			width: 120px;
 			margin-left: calc(50% - 60px);
-			border:2px solid white;
+			border:2px solid $blue;
 			padding: 0 0 38px 0;
 		}
 		button:hover {
-			color: black;
-			background: white;
+			color: $grey;
+			background: $blue;
 			transition: all 0.5s ease;
 		}
 	}
@@ -255,6 +266,7 @@ nav {
 	width: 100%;
 	padding-top: 90px;
 	overflow:scroll;
+	color: $blue;
 	.wordcontainer {
 		width: 50%;
 		float: left;
@@ -264,7 +276,7 @@ nav {
 			font-weight: bold;
 			margin-bottom: 25px;
 			letter-spacing: 1px;
-			border-bottom: 1px solid white;
+			border-bottom: 1px solid $blue;
 			padding: 0 0 5px 5px;
 			width: 70px;
 			margin: 0 auto;
@@ -301,10 +313,10 @@ nav {
 main {
 	width: 100%;
 	height:36vh;
-	box-shadow: 0 -6vh 10vh #111;
+	box-shadow: 0 -6vh 10vh $grey;
 	position: absolute;
 	bottom: 0;
-	background: #111;
+	background: $grey;
 	#adjectives {
 		position: absolute;
 		left: 50%;
@@ -317,7 +329,7 @@ main {
 			text-align: center;
 			margin-bottom: 0px;
 			line-height: 1.8;
-
+			color: $blue;
 		}
 		p {
 			float:left;
@@ -329,11 +341,12 @@ main {
 			/*border-bottom: solid 3px;*/
 			margin: 0 20px 0 20px;
 			height: 48px;
+			color: $blue;
 		}
 		#input{
 			max-width: 240px;
 			display: block;
-			color: rgba(255,255,255,1);
+			color: $blue;
 			position: absolute;
 			top:36%;
 			left: 50%;
@@ -344,7 +357,7 @@ main {
 		#input2{
 			max-width: 240px;
 			display: block;
-			color: rgba(255,255,255,1);
+			color: $blue;
 			position: absolute;
 			top:36%;
 			left: 50%;
@@ -358,7 +371,7 @@ main {
 			}
 		}
 		.switchout {
-			color: rgba(255,255,255,0.028) !important;
+			color: #bfc0ca !important;
 			position: absolute !important;
 			top:92% !important;
 			transition: all 0.2s linear;
@@ -434,7 +447,7 @@ main {
 	width: 250px;
 	padding: 0 27px;
 	height: 100vh;
-	background: #151515;
+	background: white;
 		#info {
 			display: none;
 		}
@@ -451,7 +464,7 @@ main {
 			padding: 0;
 		}
 		p {
-			font-size: 13px;
+			font-size: 12px;
 			letter-spacing: 0.3px;
 			margin-bottom: 12px;
 			padding: 0;
@@ -461,7 +474,7 @@ main {
 			margin-bottom: 70px;
 		}
 		#swipeinfo {
-			color: white;
+			color: $blue;
 			font-style: italic;
 			position: absolute;
 			bottom: 65px;
@@ -485,13 +498,14 @@ main {
 		font-family: 'Marcellus SC'
 	}
 	ul {
-		background: #151515;
+		color: white;
+		background: #c1c2cc;
 		padding: 50px 70px 0 70px;
 		border-radius: 8px 8px 0 0;
 		list-style-type: none;
 		position: fixed;
 		z-index: 999;
-		bottom: 0px;
+		bottom: -1px;
 		left: 50%;
 		margin-right: -50%;
 		transform: translateX(-50%);
@@ -499,7 +513,7 @@ main {
 		transition: bottom 1.5s ease;
 	}
 	.down {
-		bottom: -110px !important;
+		bottom: -113px !important;
 		transition: bottom 1.5s ease;
 	}
 	li {
@@ -580,7 +594,7 @@ main {
 			user-select: text;
 			background: transparent;
 			border: none;
-			border-bottom: 2px solid white;
+			border-bottom: 2px solid $blue;
 			width: calc(100% - 220px);
 			font-size: 3rem;
 			/*text-align: left;*/
@@ -594,7 +608,7 @@ main {
 			letter-spacing: 0rem;
 		}
 		button {
-			color: white;
+			color: $blue;
 			text-transform: initial;
 			text-align: center;
 			letter-spacing: 0;
@@ -602,7 +616,7 @@ main {
 			width: 170px;
 			margin-left: 0;
 			float: right;
-			border-color: white;
+			border-color: $blue;
 			padding-bottom: 39px;
 			transition: all 0.5s ease;
 		}
@@ -631,7 +645,7 @@ main {
 	    		font-size: 8rem;
 	    		margin: 0 50px;
 	    		height: 115px;
-	    		border-bottom: 3px solid white;
+	    		border-bottom: 2px solid $blue;
 	    	}
 	    	svg {
 /*	    		margin-top: 30px;
@@ -644,7 +658,6 @@ main {
 	    	#input{
 		    	max-width: initial;
 				display: block;
-				color: rgba(255,255,255,1);
 				position: absolute;
 				top:17%;
 				left: 50%;
@@ -655,7 +668,6 @@ main {
 			#input2{
 				max-width: initial;
 				display: block;
-				color: rgba(255,255,255,1);
 				position: absolute;
 				top:17%;
 				left: 50%;
@@ -695,7 +707,7 @@ main {
 			.shadow1 {
 				position: fixed;
 				z-index: 4;
-				box-shadow: inset 0 -5vh 7vh #111;
+				box-shadow: inset 0 -5vh 7vh $grey;
 				height: 7vh;
 				width:134px;
 				top: calc(33vh + 30px);
@@ -703,7 +715,7 @@ main {
 			.shadow2 {
 				position: fixed;
 				z-index: 4;
-				box-shadow: inset 0 -5vh 7vh #111;
+				box-shadow: inset 0 -5vh 7vh $grey;
 				height: 7vh;
 				width:134px;
 				top: calc(73vh + 60px);
@@ -732,17 +744,17 @@ main {
 		bottom: -10%;
 		left: 50%;
 		transform: translateX(-50%);
-		color: white;
+		color: $blue;
 		text-transform: initial;
 		text-align: center;
 		letter-spacing: 0;
 		font-size: 1.5rem;
 		width: 120px;
-		border:2px solid white;
+		border:2px solid $blue;
 		padding: 0 0 38px 0;
 		&:hover {
 			color: black;
-			background: white;
+			background: $blue;
 			transition: all 0.5s ease;
 		}
 	}

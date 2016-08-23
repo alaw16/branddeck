@@ -225,11 +225,10 @@ $("#start").on('click', function() {
 	if (input.length > 0) {
 	$('#brandname').append('<span>' + input + '<i> is</i>' + '</span>').text();
 	$('#intro').fadeOut(500);
-	$('#brandname').css('color', '#fff');
 	} else {
 	$('#brandname').append('<span>' + input + '<i> is</i>' + '</span>').text();
 	$('#intro').fadeOut(500);
-	$('#brandname').css('color', '#111');
+	$('#brandname').css('color', '#cacbd4');
 	}
 });
 
@@ -240,11 +239,10 @@ $(document).keypress(function(e) {
 		if (input.length > 0) {
 			$('#brandname').append('<span>' + input + '<i> is</i>' + '</span>').text();
 			$('#intro').fadeOut(500);
-			$('#brandname').css('color', '#fff');
 			} else {
 			$('#brandname').append('<span>' + input + '<i> is</i>' + '</span>').text();
 			$('#intro').fadeOut(500);
-			$('#brandname').css('color', '#111');
+			$('#brandname').css('color', '#cacbd4');
 		}
     }
 });
