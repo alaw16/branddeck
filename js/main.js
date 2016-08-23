@@ -1,12 +1,12 @@
 $(function() {      
   //Enable swiping...
-  $("body").swipe( {
+  $("#info").swipe( {
     //Generic swipe handler for all directions
-    swipeRight:function() {
-      $('#about').addClass("right");  
+    swipeUp:function() {
+      $('#about').addClass("up");  
     },
-    swipeLeft:function() {
-      $('#about').removeClass("right");  
+    swipeDown:function() {
+      $('#about').removeClass("up");  
     },
     
   });

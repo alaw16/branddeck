@@ -1,10 +1,7 @@
 body {
   background: #111;
   color: white;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   overflow: hidden;
   scroll: auto;
   font-family: 'Marcellus';
@@ -38,8 +35,7 @@ body {
   position: absolute;
   top: -25px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   color: white;
   text-transform: initial;
   text-align: center;
@@ -51,7 +47,6 @@ body {
   height: 0;
   width: 110px;
   padding: 0 0 0 0;
-  -webkit-transition: top 1.5s ease;
   transition: top 1.5s ease; }
   #instruction-icon span {
     position: relative;
@@ -59,39 +54,52 @@ body {
 
 .right {
   left: 0% !important;
-  -webkit-transition: left 1s ease;
+  transition: left 1s ease; }
+
+.up {
+  top: 0% !important;
   transition: left 1s ease; }
 
 #about {
   position: fixed;
-  left: -100%;
-  top: 0;
+  left: 0;
+  top: calc(100% - 15px);
   z-index: 5;
-  width: 84%;
-  padding: 0 8%;
+  width: 100%;
   /*	border-right: 1px solid white;*/
   height: 100vh;
   background: #151515;
-  -webkit-transition: left 1s ease;
   transition: left 1s ease; }
   #about h2 {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 45px;
     font-size: 34px;
-    margin-bottom: 7px; }
+    margin-bottom: 7px;
+    padding: 0 10%; }
   #about h3 {
     font-family: 'Marcellus SC';
     font-size: 19px;
     margin-bottom: 3px;
-    margin-top: 27px; }
-  #about p:nth-of-type(1) {
+    margin-top: 27px;
+    padding: 0 10%; }
+  #about p:nth-of-type(2) {
     text-align: center;
-    padding-bottom: 17px;
-    border-bottom: solid 1px white; }
+    padding-bottom: 25px; }
   #about p {
     font-size: 11px;
     letter-spacing: 0.3px;
-    margin-bottom: 12px; }
+    margin-bottom: 12px;
+    padding: 0 10%; }
+  #about #info {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 13px;
+    background: white;
+    text-align: center;
+    color: #111;
+    font-size: 0.8rem;
+    padding: 1px 0 2px 0; }
 
 #about-icon {
   display: none;
@@ -109,8 +117,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%); }
   #about-icon:hover {
     opacity: 0.8; }
   #about-icon:active {
@@ -145,24 +152,20 @@ nav {
   top: 0;
   z-index: 4;
   background: #111; }
-  #intro #swipeinfo {
-    color: white;
-    font-style: italic;
+  #intro img {
     position: absolute;
+    width: 50px;
     bottom: 65px;
     left: 50%;
     margin-right: -50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    font-size: 1.2rem; }
+    transform: translateX(-50%); }
   #intro #introtext {
     width: 80%;
     position: absolute;
     top: 48%;
     left: 50%;
     margin-right: -50%;
-    -webkit-transform: translate(-50%, -52%);
-            transform: translate(-50%, -52%);
+    transform: translate(-50%, -52%);
     overflow: hidden;
     /*		#smaller {
     			font-size: 1.5rem;
@@ -186,10 +189,7 @@ nav {
       margin-top: 0px; }
     #intro #introtext input {
       overflow: hidden;
-      -webkit-user-select: text;
-         -moz-user-select: text;
-          -ms-user-select: text;
-              user-select: text;
+      user-select: text;
       background: transparent;
       border: none;
       border-bottom: 2px solid white;
@@ -217,7 +217,6 @@ nav {
     #intro #introtext button:hover {
       color: black;
       background: white;
-      -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease; }
 
 #lists {
@@ -250,17 +249,13 @@ nav {
         margin-bottom: 100px; }
       #lists .wordcontainer ul li {
         text-align: center;
-        -webkit-transition: translate 0.5s ease;
         transition: translate 0.5s ease;
-        -webkit-animation-duration: 0.5s;
-                animation-duration: 0.5s;
+        animation-duration: 0.5s;
         line-height: 1.2;
-        -webkit-transform: scale(0.95);
-                transform: scale(0.95);
+        transform: scale(0.95);
         cursor: -webkit-image-set(url(../images/x_lo.png) 1x, url(../images/x.png) 2x) 17 13, auto; }
         #lists .wordcontainer ul li:hover {
-          -webkit-transform: scale(1);
-                  transform: scale(1); }
+          transform: scale(1); }
 
 main {
   width: 100%;
@@ -272,8 +267,7 @@ main {
   main #adjectives {
     position: absolute;
     left: 50%;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
+    transform: translate(-50%);
     width: 300px;
     bottom: 23vh; }
     main #adjectives #brandname {
@@ -300,9 +294,7 @@ main {
       top: 36%;
       left: 50%;
       margin-right: -50%;
-      -webkit-transform: translate(-50%, 0);
-              transform: translate(-50%, 0);
-      -webkit-transition: all 0.2s linear;
+      transform: translate(-50%, 0);
       transition: all 0.2s linear; }
     main #adjectives #input2 {
       max-width: 240px;
@@ -312,9 +304,7 @@ main {
       top: 36%;
       left: 50%;
       margin-right: -50%;
-      -webkit-transform: translate(-50%, 0);
-              transform: translate(-50%, 0);
-      -webkit-transition: all 0.2s linear;
+      transform: translate(-50%, 0);
       transition: all 0.2s linear; }
     main #adjectives #flip:hover {
       cursor: pointer; }
@@ -322,7 +312,6 @@ main {
       color: rgba(255, 255, 255, 0.028) !important;
       position: absolute !important;
       top: 92% !important;
-      -webkit-transition: all 0.2s linear;
       transition: all 0.2s linear; }
     main #adjectives svg {
       float: left;
@@ -331,13 +320,11 @@ main {
       main #adjectives svg:hover {
         cursor: pointer; }
     main #adjectives svg:nth-of-type(1) {
-      -webkit-transform: rotate(180deg);
-              transform: rotate(180deg); }
+      transform: rotate(180deg); }
   main #icons {
     position: absolute;
     left: 50%;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
+    transform: translate(-50%);
     bottom: 6vh;
     /*		p {
     			text-align: center;
@@ -354,8 +341,7 @@ main {
       margin: 0 30px;
       width: 35px; }
     main #icons svg:nth-of-type(3) {
-      -webkit-transform: rotate(180deg);
-              transform: rotate(180deg); }
+      transform: rotate(180deg); }
 
 /*@media only screen and (min-width: 500px) {
 	#intro{
@@ -389,19 +375,23 @@ main {
     padding: 0 27px;
     height: 100vh;
     background: #151515; }
+    #about #info {
+      display: none; }
     #about h2 {
       text-align: center;
       margin-top: 60px;
-      font-size: 34px; }
+      padding: 0; }
     #about h3 {
       font-family: 'Marcellus SC';
       font-size: 23px;
       margin-bottom: 3px;
-      margin-top: 27px; }
+      margin-top: 27px;
+      padding: 0; }
     #about p {
       font-size: 13px;
       letter-spacing: 0.3px;
-      margin-bottom: 12px; }
+      margin-bottom: 12px;
+      padding: 0; }
     #about p:nth-of-type(1) {
       text-align: center;
       margin-bottom: 70px; }
@@ -412,8 +402,7 @@ main {
       bottom: 65px;
       left: 50%;
       margin-right: -50%;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
+      transform: translateX(-50%);
       font-size: 1.2rem; }
 
   #instructions {
@@ -426,8 +415,7 @@ main {
       letter-spacing: 0.1rem;
       left: 50%;
       margin-right: -50%;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
+      transform: translateX(-50%);
       font-family: "Marcellus SC"; }
     #instructions ul {
       background: #151515;
@@ -439,14 +427,11 @@ main {
       bottom: 0px;
       left: 50%;
       margin-right: -50%;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
+      transform: translateX(-50%);
       margin-bottom: 0 !important;
-      -webkit-transition: bottom 1.5s ease;
       transition: bottom 1.5s ease; }
     #instructions .down {
       bottom: -110px !important;
-      -webkit-transition: bottom 1.5s ease;
       transition: bottom 1.5s ease; }
     #instructions li {
       /*clear: both;*/
@@ -460,20 +445,15 @@ main {
       height: 28px;
       margin-right: 10px;
       float: left;
-      -webkit-transform: rotateZ(-90deg);
-              transform: rotateZ(-90deg); }
+      transform: rotateZ(-90deg); }
     #instructions #one img:nth-of-type(2) {
-      -webkit-transform: rotateZ(90deg);
-              transform: rotateZ(90deg); }
+      transform: rotateZ(90deg); }
     #instructions #two img {
-      -webkit-transform: rotateZ(0deg);
-              transform: rotateZ(0deg); }
+      transform: rotateZ(0deg); }
     #instructions #three img:nth-of-type(1) {
-      -webkit-transform: rotateZ(0deg);
-              transform: rotateZ(0deg); }
+      transform: rotateZ(0deg); }
     #instructions #three img:nth-of-type(2) {
-      -webkit-transform: rotateZ(180deg);
-              transform: rotateZ(180deg); }
+      transform: rotateZ(180deg); }
 
   .displaynone {
     visibility: collapse; }
@@ -491,8 +471,7 @@ main {
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     margin-top: 0; }
     #intro #introtext h2 {
       font-family: 'Marcellus';
@@ -509,10 +488,7 @@ main {
       padding-top: 12px;
       padding-bottom: 0px; }
     #intro #introtext input {
-      -webkit-user-select: text;
-         -moz-user-select: text;
-          -ms-user-select: text;
-              user-select: text;
+      user-select: text;
       background: transparent;
       border: none;
       border-bottom: 2px solid white;
@@ -536,7 +512,6 @@ main {
       float: right;
       border-color: white;
       padding-bottom: 39px;
-      -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease; }
     #intro #introtext #form {
       margin-top: 70px; }
@@ -548,8 +523,7 @@ main {
     top: 58%;
     left: 50%;
     margin-right: -50%;
-    -webkit-transform: translate(-50%, -42%);
-            transform: translate(-50%, -42%);
+    transform: translate(-50%, -42%);
     box-shadow: none; }
     main #adjectives {
       width: 655px; }
@@ -576,9 +550,7 @@ main {
         top: 17%;
         left: 50%;
         margin-right: -50%;
-        -webkit-transform: translate(-50%, 0);
-                transform: translate(-50%, 0);
-        -webkit-transition: all 0.2s linear;
+        transform: translate(-50%, 0);
         transition: all 0.2s linear; }
       main #adjectives #input2 {
         max-width: initial;
@@ -588,16 +560,13 @@ main {
         top: 17%;
         left: 50%;
         margin-right: -50%;
-        -webkit-transform: translate(-50%, 0);
-                transform: translate(-50%, 0);
-        -webkit-transition: all 0.2s linear;
+        transform: translate(-50%, 0);
         transition: all 0.2s linear; }
       main #adjectives #flip:hover {
         cursor: pointer; }
       main #adjectives .switchout {
         position: absolute !important;
         top: 92% !important;
-        -webkit-transition: all 0.2s linear;
         transition: all 0.2s linear; }
 
   #lists {
@@ -650,8 +619,7 @@ main {
     position: absolute;
     bottom: -10%;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
     color: white;
     text-transform: initial;
     text-align: center;
@@ -663,7 +631,6 @@ main {
     #finalize:hover {
       color: black;
       background: white;
-      -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease; } }
 /*iPhone 4-5s adjustments*/
 /*@media only screen and (max-width: 400px) {
