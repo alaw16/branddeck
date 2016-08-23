@@ -1,6 +1,6 @@
 $(function() {      
   //Enable swiping...
-  $("#info").swipe( {
+  $("#info, #about").swipe( {
     //Generic swipe handler for all directions
     swipeUp:function() {
       $('#about').addClass("up");  
@@ -10,6 +10,10 @@ $(function() {
     },
     
   });
+});
+
+$("#info").on("click", function() {
+	$("#about").toggleClass("up");
 });
 
 
