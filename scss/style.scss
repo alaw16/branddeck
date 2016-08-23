@@ -61,22 +61,22 @@ body {
 }
 .right  {
 	left: 0% !important;
-	transition: left 1s ease;
+	transition: all 1s ease;
 }
 .up  {
 	top: 0% !important;
-	transition: left 1s ease;
+	transition: all 1s ease;
 }
 #about {
 	position: fixed;
 	left: 0;
-	top: calc(100% - 15px);
+	top: calc(100% - 20px);
 	z-index: 5;
 	width: 100%;
 /*	border-right: 1px solid white;*/
 	height: 100vh;
 	background: #151515;
-	transition: left 1s ease;
+	transition: all 1s ease;
 	h2 {
 		text-align: center;
 		margin-top: 45px;
@@ -106,12 +106,12 @@ body {
 		position: absolute;
 		top: 0;
 		width: 100%;
-		height: 13px;
+		height: 20px;
 		background: white;
 		text-align: center;
 		color: #111;
-		font-size: 0.8rem;
-		padding: 1px 0 2px 0;
+		font-size: 1rem;
+		padding: 2px 0 0 0;
 	}
 }
 #about-icon {
@@ -309,7 +309,7 @@ main {
 		left: 50%;
 		transform: translate(-50%);
 		width: 300px;
-		bottom: 23vh;
+		bottom: 26vh;
 		#brandname {
 			font-size: 1.7rem;
 			letter-spacing: 0.03rem;
@@ -378,7 +378,7 @@ main {
 		position: absolute;
 		left: 50%;
 		transform: translate(-50%);
-		bottom: 6vh;
+		bottom: 7.5vh;
 		svg {
 		width: 30px;
 		float: left;
