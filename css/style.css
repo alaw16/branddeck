@@ -70,7 +70,6 @@ body {
     margin-bottom: 12px; }
 
 #about-icon {
-  display: none;
   cursor: pointer;
   position: fixed;
   bottom: 27px;
