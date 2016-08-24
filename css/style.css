@@ -1,5 +1,5 @@
 body {
-  background: #dfe0e6;
+  background: #cfd1da;
   color: #1f19e2;
   user-select: none;
   overflow: hidden;
@@ -24,7 +24,7 @@ body {
   body ::-webkit-scrollbar-thumb {
     background: #1f19e2; }
   body ::-webkit-scrollbar-track {
-    background: #e3e6ec; }
+    background: #cfd1da; }
   body ::-webkit-scrollbar-track:active {
     background: #333333; }
   body ::-webkit-scrollbar-corner {
@@ -48,7 +48,7 @@ body {
   text-align: center;
   font-size: 1.25rem;
   letter-spacing: 0;
-  border-bottom: 50px solid #d8dae0;
+  border-bottom: 50px solid #c3c5ce;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
   height: 0;
@@ -102,7 +102,7 @@ body {
     top: 0;
     width: 100%;
     height: 20px;
-    background: #e3e6ec;
+    background: #b1b7c3;
     text-align: center;
     color: white;
     font-size: 1rem;
@@ -160,7 +160,7 @@ nav {
   position: fixed;
   top: 0;
   z-index: 4;
-  background: #dfe0e6; }
+  background: #cfd1da; }
   #intro img {
     position: absolute;
     width: 50px;
@@ -224,7 +224,7 @@ nav {
       border: 2px solid #1f19e2;
       padding: 0 0 38px 0; }
     #intro #introtext button:hover {
-      color: #dfe0e6;
+      color: #cfd1da;
       background: #1f19e2;
       transition: all 0.5s ease; }
 
@@ -273,10 +273,10 @@ nav {
 main {
   width: 100%;
   height: 36vh;
-  box-shadow: 0 -12vh 10vh #dfe0e6;
+  box-shadow: 0 -12vh 10vh #cfd1da;
   position: absolute;
   bottom: 0;
-  background: #dfe0e6; }
+  background: #cfd1da; }
   main #adjectives {
     position: absolute;
     left: 50%;
@@ -324,7 +324,7 @@ main {
     main #adjectives #flip:hover {
       cursor: pointer; }
     main #adjectives .switchout {
-      color: #d8dae0 !important;
+      color: #c3c5ce !important;
       position: absolute !important;
       top: 92% !important;
       transition: all 0.2s linear; }
@@ -441,7 +441,7 @@ main {
       font-family: "Marcellus SC"; }
     #instructions ul {
       color: white;
-      background: #d8dae0;
+      background: #c3c5ce;
       padding: 35px 70px 0 70px;
       list-style-type: none;
       position: fixed;
@@ -604,6 +604,8 @@ main {
     height: calc(100vh - 60px);
     width: 140px;
     overflow: hidden; }
+    #lists .wordcontainer:nth-of-type(1) {
+      padding: 0 0%; }
     #lists .wordcontainer {
       position: relative;
       float: none;
@@ -617,14 +619,14 @@ main {
       #lists .wordcontainer .shadow1 {
         position: fixed;
         z-index: 4;
-        box-shadow: inset 0 -5vh 7vh #dfe0e6;
+        box-shadow: inset 0 -5vh 7vh #cfd1da;
         height: 7vh;
         width: 134px;
         top: calc(33vh + 30px); }
       #lists .wordcontainer .shadow2 {
         position: fixed;
         z-index: 4;
-        box-shadow: inset 0 -5vh 7vh #dfe0e6;
+        box-shadow: inset 0 -5vh 7vh #cfd1da;
         height: 7vh;
         width: 134px;
         top: calc(73vh + 60px); }

@@ -1,6 +1,6 @@
-$grey: #dfe0e6;
-$lgrey: #e3e6ec;
-$dgrey: #d8dae0;
+$grey: #cfd1da;
+$lgrey: #b1b7c3;
+$dgrey: #c3c5ce;
 $blue: #1f19e2;
 body {
 	background: $grey;
@@ -29,7 +29,7 @@ body {
 	  background: #000000;
 	}*/
 	::-webkit-scrollbar-track {
-	  background: $lgrey;
+	  background: $grey;
 	}
 	/*::-webkit-scrollbar-track:hover {
 	  background: #666666;
@@ -717,6 +717,9 @@ main {
 		height: calc(100vh - 60px);
 		width: 140px;
 		overflow:hidden;
+		.wordcontainer:nth-of-type(1) {
+		padding: 0 0%;
+		}
 		.wordcontainer {
 			position: relative;
 			float: none;

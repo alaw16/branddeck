@@ -234,7 +234,7 @@ $("#start").on('click', function() {
 	} else {
 	$('#brandname').append('<span>' + input + '<i> is</i>' + '</span>').text();
 	$('#intro').fadeOut(500);
-	$('#brandname').css('color', '#cacbd4');
+	$('#brandname').css('color', '#cfd1da');
 	}
 });
 
