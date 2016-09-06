@@ -1,6 +1,6 @@
 body {
-  background: #cfd1da;
-  color: #1f19e2;
+  background: white;
+  color: red;
   user-select: none;
   overflow: hidden;
   scroll: auto;
@@ -22,9 +22,9 @@ body {
   body ::-webkit-scrollbar {
     width: 1px; }
   body ::-webkit-scrollbar-thumb {
-    background: #1f19e2; }
+    background: red; }
   body ::-webkit-scrollbar-track {
-    background: #cfd1da; }
+    background: white; }
   body ::-webkit-scrollbar-track:active {
     background: #333333; }
   body ::-webkit-scrollbar-corner {
@@ -35,29 +35,6 @@ body {
 
 #instructions {
   display: none; }
-
-#instruction-icon {
-  font-family: 'Marcellus SC';
-  cursor: pointer;
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #1f19e2;
-  text-transform: initial;
-  text-align: center;
-  font-size: 1.25rem;
-  letter-spacing: 0;
-  border-bottom: 50px solid #c3c5ce;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  height: 0;
-  width: 110px;
-  padding: 0 0 0 0;
-  transition: top 1.5s ease; }
-  #instruction-icon span {
-    position: relative;
-    top: 4px; }
 
 .right {
   left: 0% !important;
@@ -75,8 +52,13 @@ body {
   width: 100%;
   /*	border-right: 1px solid $blue;*/
   height: 100vh;
-  background: white;
-  transition: all 1s ease; }
+  background: #F7F7F7;
+  transition: all 1s ease;
+  color: red;
+  /*	#text {
+  		width: 400px;
+  		margin-left: calc(50% - 200px);
+  	}*/ }
   #about h2 {
     text-align: center;
     margin-top: 60px;
@@ -89,7 +71,7 @@ body {
     margin-bottom: 3px;
     margin-top: 27px;
     padding: 0 10%; }
-  #about p:nth-of-type(2) {
+  #about p:nth-of-type(1) {
     text-align: center;
     padding-bottom: 25px; }
   #about p {
@@ -102,12 +84,13 @@ body {
     top: 0;
     width: 100%;
     height: 20px;
-    background: #b1b7c3;
+    background: #F7F7F7;
     text-align: center;
-    color: white;
+    color: red;
     font-size: 1rem;
-    padding: 3px 0 0 0;
-    cursor: pointer; }
+    padding: 4px 0 0 0;
+    cursor: pointer;
+    letter-spacing: 2px; }
 
 #about-icon {
   display: none;
@@ -116,10 +99,10 @@ body {
   bottom: 27px;
   left: 27px;
   border-radius: 50%;
-  border: 2px solid #1f19e2;
+  border: 1px solid red;
   padding: 1.5rem;
   z-index: 6;
-  color: #1f19e2; }
+  color: red; }
   #about-icon p {
     font-size: 16px;
     position: absolute;
@@ -129,22 +112,22 @@ body {
   #about-icon:hover {
     opacity: 0.8; }
   #about-icon:active {
-    background: #fff;
-    color: #111; }
+    background: red;
+    color: white; }
 
 nav {
   width: 100%;
   height: 58px;
   position: fixed;
-  z-index: 4;
+  z-index: 6;
   top: 0;
   /*	border-bottom: solid 1px $blue;*/
   background: transparent;
-  color: white; }
+  color: red; }
   nav h1 {
     margin-top: 18px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: 'Marcellus SC';
     letter-spacing: 0.08rem; }
   nav #help {
@@ -160,7 +143,7 @@ nav {
   position: fixed;
   top: 0;
   z-index: 4;
-  background: #cfd1da; }
+  background: white; }
   #intro img {
     position: absolute;
     width: 50px;
@@ -201,7 +184,7 @@ nav {
       user-select: text;
       background: transparent;
       border: none;
-      border-bottom: 2px solid #1f19e2;
+      border-bottom: 2px solid red;
       border-radius: 0;
       width: 100%;
       text-align: center;
@@ -214,24 +197,24 @@ nav {
       color: #555;
       letter-spacing: 0.03rem; }
     #intro #introtext button {
-      color: #1f19e2;
+      color: red;
       text-transform: initial;
       text-align: center;
       letter-spacing: 0;
       font-size: 1.5rem;
       width: 120px;
       margin-left: calc(50% - 60px);
-      border: 2px solid #1f19e2;
+      border: 2px solid red;
       padding: 0 0 38px 0; }
     #intro #introtext button:hover {
-      color: #cfd1da;
-      background: #1f19e2;
+      color: white;
+      background: red;
       transition: all 0.5s ease; }
 
 #lists {
   height: 50vh;
   width: 100%;
-  margin-top: 30px; }
+  margin-top: 83px; }
   #lists .wordcontainer:nth-of-type(1) {
     padding: 0 2%; }
   #lists .wordcontainer {
@@ -243,14 +226,14 @@ nav {
       font-weight: bold;
       margin-bottom: 25px;
       letter-spacing: 1px;
-      border-bottom: 1px solid #1f19e2;
+      border-bottom: 1px solid red;
       padding: 0 0 5px 5px;
       width: 70px;
       margin: 0 auto; }
     #lists .wordcontainer ul {
       height: 300px;
       overflow-y: scroll;
-      color: #1f19e2;
+      color: red;
       overflow-x: hidden;
       list-style-type: none;
       font-size: 1.3rem;
@@ -273,10 +256,10 @@ nav {
 main {
   width: 100%;
   height: 36vh;
-  box-shadow: 0 -12vh 10vh #cfd1da;
+  box-shadow: 0 -12vh 10vh white;
   position: absolute;
   bottom: 0;
-  background: #cfd1da; }
+  background: white; }
   main #adjectives {
     position: absolute;
     left: 50%;
@@ -289,7 +272,7 @@ main {
       text-align: center;
       margin-bottom: 0px;
       line-height: 1.8;
-      color: #1f19e2; }
+      color: red; }
     main #adjectives p {
       float: left;
       width: 230px;
@@ -300,11 +283,11 @@ main {
       /*border-bottom: solid 3px;*/
       margin: 0 20px 0 20px;
       height: 48px;
-      color: #1f19e2; }
+      color: red; }
     main #adjectives #input {
       max-width: 240px;
       display: block;
-      color: #1f19e2;
+      color: red;
       position: absolute;
       top: 36%;
       left: 50%;
@@ -314,7 +297,7 @@ main {
     main #adjectives #input2 {
       max-width: 240px;
       display: block;
-      color: #1f19e2;
+      color: red;
       position: absolute;
       top: 36%;
       left: 50%;
@@ -324,17 +307,17 @@ main {
     main #adjectives #flip:hover {
       cursor: pointer; }
     main #adjectives .switchout {
-      color: #c3c5ce !important;
+      color: #F7F7F7 !important;
       position: absolute !important;
       top: 92% !important;
       transition: all 0.2s linear; }
-    main #adjectives svg {
+    main #adjectives img {
       float: left;
       width: 15px;
       margin-top: 15px; }
-      main #adjectives svg:hover {
+      main #adjectives img:hover {
         cursor: pointer; }
-    main #adjectives svg:nth-of-type(1) {
+    main #adjectives img:nth-of-type(1) {
       transform: rotate(180deg); }
   main #icons {
     position: absolute;
@@ -347,15 +330,15 @@ main {
     			float: left;
     			padding: 8px 15px 0 15px;
     		}*/ }
-    main #icons svg {
+    main #icons img {
       width: 30px;
       float: left; }
-      main #icons svg:hover {
+      main #icons img:hover {
         cursor: pointer; }
-    main #icons svg:nth-of-type(2) {
+    main #icons img:nth-of-type(2) {
       margin: 0 30px;
       width: 35px; }
-    main #icons svg:nth-of-type(3) {
+    main #icons img:nth-of-type(3) {
       transform: rotate(180deg); }
   main #tracker {
     position: absolute;
@@ -365,25 +348,19 @@ main {
     main #tracker p {
       font-size: 0.75rem; }
 
-/*@media only screen and (min-width: 500px) {
-	#intro{
-		#introtext {
-			width: 480px;
-			margin-left: 0;
-			position: absolute;
-			top:48%;
-			left: 50%;
-			margin-right: -50%;
-			transform: translate(-50%,-52%);
-			margin-top: 0;
-		}
-	}
-}*/
+@media only screen and (min-width: 500px) {
+  #about h2 {
+    font-size: 45px; }
+  #about h3 {
+    font-size: 25px; }
+  #about p {
+    font-size: 13px; } }
 @media only screen and (min-width: 800px) {
   nav {
     background: transparent; }
     nav h1 {
-      margin-top: 30px; }
+      margin-top: 30px;
+      font-size: 2rem; }
 
   #about-icon {
     display: block; }
@@ -396,13 +373,17 @@ main {
     width: 250px;
     padding: 0 27px;
     height: 100vh;
-    background: white; }
+    background: #fafafb; }
+    #about #text {
+      width: 100%;
+      margin-left: 0; }
     #about #info {
       display: none; }
     #about h2 {
       text-align: center;
       margin-top: 60px;
-      padding: 0; }
+      padding: 0;
+      font-size: 32px; }
     #about h3 {
       font-family: 'Marcellus SC';
       font-size: 23px;
@@ -416,9 +397,9 @@ main {
       padding: 0; }
     #about p:nth-of-type(1) {
       text-align: center;
-      margin-bottom: 70px; }
+      margin-bottom: 30px; }
     #about #swipeinfo {
-      color: #1f19e2;
+      color: red;
       font-style: italic;
       position: absolute;
       bottom: 65px;
@@ -429,7 +410,35 @@ main {
 
   #instructions {
     display: block;
-    position: fixed; }
+    position: fixed;
+    z-index: 3; }
+    #instructions #instruction-icon {
+      font-family: 'Marcellus SC';
+      cursor: pointer;
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-transform: initial;
+      text-align: center;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      border: solid 1px red;
+      border-bottom: 0;
+      background: white;
+      /*		border-bottom: 50px solid $dgrey;
+      		border-left: 25px solid transparent;
+      		border-right: 25px solid transparent;*/
+      height: 0;
+      width: 110px;
+      padding: 5px 10px 29px 10px;
+      transition: top 1.5s ease; }
+      #instructions #instruction-icon:active {
+        background: red;
+        color: white; }
+      #instructions #instruction-icon span {
+        position: relative;
+        top: 0px; }
     #instructions #downbutton {
       position: fixed;
       z-index: 999;
@@ -438,11 +447,11 @@ main {
       left: 50%;
       margin-right: -50%;
       transform: translateX(-50%);
-      font-family: "Marcellus SC"; }
+      font-family: 'Marcellus SC'; }
     #instructions ul {
-      color: white;
-      background: #c3c5ce;
+      color: red;
       padding: 35px 70px 0 70px;
+      border: 1px solid red;
       list-style-type: none;
       position: fixed;
       z-index: 999;
@@ -453,7 +462,7 @@ main {
       margin-bottom: 0 !important;
       transition: bottom 1.5s ease; }
     #instructions .down {
-      bottom: -92px !important;
+      bottom: -98px !important;
       transition: bottom 1.5s ease; }
     #instructions li {
       /*clear: both;*/
@@ -521,7 +530,7 @@ main {
       user-select: text;
       background: transparent;
       border: none;
-      border-bottom: 2px solid #1f19e2;
+      border-bottom: 2px solid red;
       width: calc(100% - 220px);
       font-size: 3rem;
       /*text-align: left;*/
@@ -532,7 +541,7 @@ main {
       color: #333;
       letter-spacing: 0rem; }
     #intro #introtext button {
-      color: #1f19e2;
+      color: red;
       text-transform: initial;
       text-align: center;
       letter-spacing: 0;
@@ -540,7 +549,7 @@ main {
       width: 170px;
       margin-left: 0;
       float: right;
-      border-color: #1f19e2;
+      border-color: red;
       padding-bottom: 39px;
       transition: all 0.5s ease; }
     #intro #introtext #form {
@@ -565,8 +574,8 @@ main {
         font-size: 8rem;
         margin: 0 50px;
         height: 115px;
-        border-bottom: 2px solid #1f19e2; }
-      main #adjectives svg {
+        border-bottom: 2px solid red; }
+      main #adjectives img {
         /*	    		margin-top: 30px;
         	    		width: 20px;*/
         display: none; }
@@ -619,14 +628,14 @@ main {
       #lists .wordcontainer .shadow1 {
         position: fixed;
         z-index: 4;
-        box-shadow: inset 0 -5vh 7vh #cfd1da;
+        box-shadow: inset 0 -5vh 7vh white;
         height: 7vh;
         width: 134px;
         top: calc(33vh + 30px); }
       #lists .wordcontainer .shadow2 {
         position: fixed;
         z-index: 4;
-        box-shadow: inset 0 -5vh 7vh #cfd1da;
+        box-shadow: inset 0 -5vh 7vh white;
         height: 7vh;
         width: 134px;
         top: calc(73vh + 60px); }
@@ -650,17 +659,17 @@ main {
     bottom: -10%;
     left: 50%;
     transform: translateX(-50%);
-    color: #1f19e2;
+    color: red;
     text-transform: initial;
     text-align: center;
     letter-spacing: 0;
     font-size: 1.5rem;
     width: 120px;
-    border: 2px solid #1f19e2;
+    border: 2px solid red;
     padding: 0 0 38px 0; }
     #finalize:hover {
       color: black;
-      background: #1f19e2;
+      background: red;
       transition: all 0.5s ease; } }
 /*iPhone 4-5s adjustments*/
 /*@media only screen and (max-width: 400px) {

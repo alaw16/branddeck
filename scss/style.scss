@@ -1,7 +1,7 @@
-$grey: #cfd1da;
-$lgrey: #b1b7c3;
-$dgrey: #c3c5ce;
-$blue: #1f19e2;
+$grey: white;
+$lgrey: #fafafb;
+$dgrey: #F7F7F7;
+$blue: red;
 body {
 	background: $grey;
 	color: $blue;
@@ -47,30 +47,6 @@ body {
 #instructions {
 	display: none;
 }
-#instruction-icon {
-	font-family: 'Marcellus SC';
-	cursor: pointer;
-	position: absolute;
-	top: -25px;
-	left: 50%;
-	transform: translateX(-50%);
-	color: $blue;
-	text-transform: initial;
-	text-align: center;
-	font-size: 1.25rem;
-	letter-spacing: 0;
-	border-bottom: 50px solid $dgrey;
-	border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-	height: 0;
-	width: 110px;
-	padding: 0 0 0 0;
-	transition: top 1.5s ease;
-	span {
-		position: relative;
-		top: 4px;
-	}
-}
 .right  {
 	left: 0% !important;
 	transition: all 1s ease;
@@ -87,8 +63,13 @@ body {
 	width: 100%;
 /*	border-right: 1px solid $blue;*/
 	height: 100vh;
-	background: white;
+	background: $dgrey;
 	transition: all 1s ease;
+	color: red;
+/*	#text {
+		width: 400px;
+		margin-left: calc(50% - 200px);
+	}*/
 	h2 {
 		text-align: center;
 		margin-top: 60px;
@@ -103,7 +84,7 @@ body {
 		margin-top: 27px;
 		padding: 0 10%;
 	}
-	p:nth-of-type(2) {
+	p:nth-of-type(1) {
 		text-align: center;
 		padding-bottom: 25px;
 	}
@@ -119,12 +100,13 @@ body {
 		top: 0;
 		width: 100%;
 		height: 20px;
-		background: $lgrey;
+		background: $dgrey;
 		text-align: center;
-		color: white;
+		color: red;
 		font-size: 1rem;
-		padding: 3px 0 0 0;
+		padding: 4px 0 0 0;
 		cursor: pointer;
+		letter-spacing: 2px;
 	}
 }
 #about-icon {
@@ -134,7 +116,7 @@ body {
 	bottom: 27px;
 	left: 27px;
 	border-radius: 50%;
-	border: 2px solid $blue;
+	border: 1px solid $blue;
 	padding: 1.5rem;
 	z-index: 6;
 	color: $blue;
@@ -149,23 +131,23 @@ body {
 		opacity: 0.8;
 	}
 	&:active {
-		background: #fff;
-		color: #111;
+		background: red;
+		color: white;
 	}
 }
 nav {
 	width: 100%;
 	height: 58px;
 	position: fixed;
-	z-index: 4;
+	z-index: 6;
 	top: 0;
 /*	border-bottom: solid 1px $blue;*/
 	background: transparent;
-	color: white;
+	color: $blue;
 	h1 {
 		margin-top: 18px;
 		text-align: center;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		font-family: 'Marcellus SC';
 		letter-spacing: 0.08rem;
 }
@@ -266,7 +248,7 @@ nav {
 #lists {
 	height: 50vh;
 	width: 100%;
-	margin-top: 30px;
+	margin-top: 83px;
 	.wordcontainer:nth-of-type(1) {
 		padding: 0 2%;
 	}
@@ -382,7 +364,7 @@ main {
 			top:92% !important;
 			transition: all 0.2s linear;
 		}
-		svg {
+		img {
 			float:left;
 			width: 15px;
 			margin-top: 15px;
@@ -390,7 +372,7 @@ main {
 				cursor:pointer;
 			}
 		}
-		svg:nth-of-type(1) {
+		img:nth-of-type(1) {
 			transform: rotate(180deg);
 		}
 	}
@@ -399,18 +381,18 @@ main {
 		left: 50%;
 		transform: translate(-50%);
 		bottom: 8.5vh;
-		svg {
+		img {
 		width: 30px;
 		float: left;
 			&:hover {
 				cursor:pointer;
 			}
 		}
-		svg:nth-of-type(2) {
+		img:nth-of-type(2) {
 			margin: 0 30px;
 			width: 35px;
 		}
-		svg:nth-of-type(3) {
+		img:nth-of-type(3) {
 			transform: rotate(180deg);
 		}
 /*		p {
@@ -430,25 +412,25 @@ main {
 		}
 	}
 }
-/*@media only screen and (min-width: 500px) {
-	#intro{
-		#introtext {
-			width: 480px;
-			margin-left: 0;
-			position: absolute;
-			top:48%;
-			left: 50%;
-			margin-right: -50%;
-			transform: translate(-50%,-52%);
-			margin-top: 0;
+@media only screen and (min-width: 500px) {
+	#about {
+		h2 {
+			font-size: 45px;	
+		}
+		h3 {
+			font-size: 25px;
+		}
+		p {
+			font-size: 13px;
 		}
 	}
-}*/
+}
 @media only screen and (min-width: 800px) {
 	nav {
 		background: transparent;
 		h1 {
 			margin-top: 30px;
+			font-size: 2rem;
 		}
 	}
 	#about-icon {
@@ -462,7 +444,11 @@ main {
 	width: 250px;
 	padding: 0 27px;
 	height: 100vh;
-	background: white;
+	background: $lgrey;
+		#text {
+		width: 100%;
+		margin-left: 0;
+		}
 		#info {
 			display: none;
 		}
@@ -470,6 +456,7 @@ main {
 			text-align: center;
 			margin-top: 60px;
 			padding: 0;
+			font-size: 32px;
 		}
 		h3 {
 			font-family: 'Marcellus SC';
@@ -486,7 +473,7 @@ main {
 		}
 		p:nth-of-type(1) {
 			text-align: center;
-			margin-bottom: 70px;
+			margin-bottom: 30px;
 		}
 		#swipeinfo {
 			color: $blue;
@@ -502,6 +489,37 @@ main {
 	#instructions {
 	display: block;
 	position: fixed;
+	z-index: 3;
+	#instruction-icon {
+		font-family: 'Marcellus SC';
+		cursor: pointer;
+		position: absolute;
+		top: -35px;
+		left: 50%;
+		transform: translateX(-50%);
+		text-transform: initial;
+		text-align: center;
+		font-size: 1.5rem;
+		letter-spacing: 1px;
+		border: solid 1px red;
+		border-bottom: 0;
+		background: $grey;
+/*		border-bottom: 50px solid $dgrey;
+		border-left: 25px solid transparent;
+		border-right: 25px solid transparent;*/
+		height: 0;
+		width: 110px;
+		padding: 5px 10px 29px 10px;
+		transition: top 1.5s ease;
+			&:active {
+				background: red;
+				color: white;
+			}
+		span {
+			position: relative;
+			top: 0px;
+		}
+	}
 	#downbutton {
 		position: fixed;
 		z-index: 999;
@@ -510,12 +528,12 @@ main {
 		left: 50%;
 		margin-right: -50%;
 		transform: translateX(-50%);
-		font-family: 'Marcellus SC'
+		font-family: 'Marcellus SC';
 	}
 	ul {
-		color: white;
-		background: $dgrey;
+		color: red;
 		padding: 35px 70px 0 70px;
+		border: 1px solid red;
 		list-style-type: none;
 		position: fixed;
 		z-index: 999;
@@ -527,7 +545,7 @@ main {
 		transition: bottom 1.5s ease;
 	}
 	.down {
-		bottom: -92px !important;
+		bottom: -98px !important;
 		transition: bottom 1.5s ease;
 	}
 	li {
@@ -551,7 +569,7 @@ main {
 		img:nth-of-type(2) {
 			transform:rotateZ(90deg);
 		}
-	}
+	} 
 	#two {
 		img {
 			transform:rotateZ(0deg);
@@ -670,7 +688,7 @@ main {
 	    		height: 115px;
 	    		border-bottom: 2px solid $blue;
 	    	}
-	    	svg {
+	    	img {
 /*	    		margin-top: 30px;
 	    		width: 20px;*/
 	    		display: none;
