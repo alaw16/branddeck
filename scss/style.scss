@@ -1,10 +1,28 @@
 $grey: white;
 $lgrey: #fafafb;
 $dgrey: #F7F7F7;
-$blue: red;
+$primary: black;
+
+@font-face {
+  font-family: 'apercu';
+  src: url('../fonts/apercu-light.otf')  format('opentype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'apercu';
+  src: url('../fonts/apercu-med.otf')  format('opentype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'larish';
+  src: url('../fonts/SuisseIntl-Bold.otf')  format('opentype');
+  font-weight: 900;
+}
+
+
 body {
 	background: $grey;
-	color: $blue;
+	color: $primary;
 	user-select: none;
 	overflow:hidden;
 	scroll:auto;
@@ -20,10 +38,10 @@ body {
 	  width: 1px;
 	}
 	::-webkit-scrollbar-thumb {
-	  background: $blue;
+	  background: $primary;
 	}
 	/*::-webkit-scrollbar-thumb:hover {
-	  background: $blue;
+	  background: $primary;
 	}*/
 	/*::-webkit-scrollbar-thumb:active {
 	  background: #000000;
@@ -40,6 +58,8 @@ body {
 	::-webkit-scrollbar-corner {
 	  background: transparent;
 	}
+}
+.spot-shadow {
 }
 .displaynone {
 	visibility: visible;
@@ -61,11 +81,11 @@ body {
 	top: calc(100% - 23px);
 	z-index: 5;
 	width: 100%;
-/*	border-right: 1px solid $blue;*/
+/*	border-right: 1px solid $primary;*/
 	height: 100vh;
 	background: $dgrey;
 	transition: all 1s ease;
-	color: red;
+	color: $primary;
 /*	#text {
 		width: 400px;
 		margin-left: calc(50% - 200px);
@@ -102,7 +122,7 @@ body {
 		height: 20px;
 		background: $dgrey;
 		text-align: center;
-		color: red;
+		color: $primary;
 		font-size: 1rem;
 		padding: 4px 0 0 0;
 		cursor: pointer;
@@ -116,10 +136,10 @@ body {
 	bottom: 27px;
 	left: 27px;
 	border-radius: 50%;
-	border: 1px solid $blue;
+	border: 1px solid $primary;
 	padding: 1.5rem;
 	z-index: 6;
-	color: $blue;
+	color: $primary;
 	p {
 		font-size: 16px;
 		position: absolute;
@@ -131,7 +151,7 @@ body {
 		opacity: 0.8;
 	}
 	&:active {
-		background: red;
+		background: $primary;
 		color: white;
 	}
 }
@@ -141,9 +161,9 @@ nav {
 	position: fixed;
 	z-index: 6;
 	top: 0;
-/*	border-bottom: solid 1px $blue;*/
+/*	border-bottom: solid 1px $primary;*/
 	background: transparent;
-	color: $blue;
+	color: $primary;
 	h1 {
 		margin-top: 18px;
 		text-align: center;
@@ -211,7 +231,7 @@ nav {
 			user-select: text;
 			background: transparent;
 			border: none;
-			border-bottom: 2px solid $blue;
+			border-bottom: 2px solid $primary;
 			border-radius: 0;
 			width: 100%;
 			text-align: center;
@@ -228,19 +248,20 @@ nav {
 			letter-spacing: 0.03rem;
 		}
 		button {
-			color: $blue;
+			background: white;
+			color: $primary;
 			text-transform: initial;
 			text-align: center;
 			letter-spacing: 0;
 			font-size: 1.5rem;
 			width: 120px;
 			margin-left: calc(50% - 60px);
-			border:2px solid $blue;
+			border:2px solid $primary;
 			padding: 0 0 38px 0;
 		}
 		button:hover {
 			color: $grey;
-			background: $blue;
+			background: $primary;
 			transition: all 0.5s ease;
 		}
 	}
@@ -261,7 +282,7 @@ nav {
 			font-weight: bold;
 			margin-bottom: 25px;
 			letter-spacing: 1px;
-			border-bottom: 1px solid $blue;
+			border-bottom: 1px solid $primary;
 			padding: 0 0 5px 5px;
 			width: 70px;
 			margin: 0 auto;
@@ -269,7 +290,7 @@ nav {
 		ul {
 			height: 300px;
 			overflow-y:scroll;
-			color: $blue;
+			color: $primary;
 			overflow-x: hidden;
 			list-style-type: none;
 			font-size: 1.3rem;
@@ -307,17 +328,22 @@ main {
 	background: $grey;
 	#adjectives {
 		position: absolute;
-		left: 50%;
+		left: 10%;
 		transform: translate(-50%);
 		width: 300px;
-		bottom: 25vh;
+		bottom: 15vh;
+		background: white;
+		border: 1px solid $primary;
+		border-radius: 8px;
+		cursor: default;
 		#brandname {
 			font-size: 1.7rem;
 			letter-spacing: 0.03rem;
 			text-align: center;
 			margin-bottom: 0px;
 			line-height: 1.8;
-			color: $blue;
+			color: $primary;
+			margin-top: 10px;
 		}
 		p {
 			float:left;
@@ -329,12 +355,12 @@ main {
 			/*border-bottom: solid 3px;*/
 			margin: 0 20px 0 20px;
 			height: 48px;
-			color: $blue;
+			color: $primary;
 		}
 		#input{
 			max-width: 240px;
 			display: block;
-			color: $blue;
+			color: $primary;
 			position: absolute;
 			top:36%;
 			left: 50%;
@@ -345,7 +371,7 @@ main {
 		#input2{
 			max-width: 240px;
 			display: block;
-			color: $blue;
+			color: $primary;
 			position: absolute;
 			top:36%;
 			left: 50%;
@@ -476,7 +502,7 @@ main {
 			margin-bottom: 30px;
 		}
 		#swipeinfo {
-			color: $blue;
+			color: $primary;
 			font-style: italic;
 			position: absolute;
 			bottom: 65px;
@@ -501,7 +527,7 @@ main {
 		text-align: center;
 		font-size: 1.5rem;
 		letter-spacing: 1px;
-		border: solid 1px red;
+		border: solid 1px $primary;
 		border-bottom: 0;
 		background: $grey;
 /*		border-bottom: 50px solid $dgrey;
@@ -512,7 +538,7 @@ main {
 		padding: 5px 10px 29px 10px;
 		transition: top 1.5s ease;
 			&:active {
-				background: red;
+				background: $primary;
 				color: white;
 			}
 		span {
@@ -531,9 +557,9 @@ main {
 		font-family: 'Marcellus SC';
 	}
 	ul {
-		color: red;
+		color: $primary;
 		padding: 35px 70px 0 70px;
-		border: 1px solid red;
+		border: 1px solid $primary;
 		list-style-type: none;
 		position: fixed;
 		z-index: 999;
@@ -606,6 +632,7 @@ main {
 	}
 	#intro{
 	#introtext {
+		overflow: visible;
 		width: 560px;
 		margin-left: 0;
 		position: absolute;
@@ -635,7 +662,7 @@ main {
 			user-select: text;
 			background: transparent;
 			border: none;
-			border-bottom: 2px solid $blue;
+			border-bottom: 2px solid $primary;
 			width: calc(100% - 220px);
 			font-size: 3rem;
 			/*text-align: left;*/
@@ -649,7 +676,7 @@ main {
 			letter-spacing: 0rem;
 		}
 		button {
-			color: $blue;
+			color: $primary;
 			text-transform: initial;
 			text-align: center;
 			letter-spacing: 0;
@@ -657,7 +684,7 @@ main {
 			width: 170px;
 			margin-left: 0;
 			float: right;
-			border-color: $blue;
+			border-color: $primary;
 			padding-bottom: 39px;
 			transition: all 0.5s ease;
 		}
@@ -677,6 +704,7 @@ main {
     box-shadow: none;
 	    #adjectives {
 	    	width: 655px;
+	    	height: 350px;
 	    	h1 {
 				font-size: 2.5rem;
 				letter-spacing: 0.08rem;
@@ -686,7 +714,6 @@ main {
 	    		font-size: 8rem;
 	    		margin: 0 50px;
 	    		height: 115px;
-	    		border-bottom: 2px solid $blue;
 	    	}
 	    	img {
 /*	    		margin-top: 30px;
@@ -700,7 +727,7 @@ main {
 		    	max-width: initial;
 				display: block;
 				position: absolute;
-				top:17%;
+				top:30%;
 				left: 50%;
 				margin-right: -50%;
 				transform: translate(-50%,0);
@@ -788,17 +815,17 @@ main {
 		bottom: -10%;
 		left: 50%;
 		transform: translateX(-50%);
-		color: $blue;
+		color: $primary;
 		text-transform: initial;
 		text-align: center;
 		letter-spacing: 0;
 		font-size: 1.5rem;
 		width: 120px;
-		border:2px solid $blue;
+		border:2px solid $primary;
 		padding: 0 0 38px 0;
 		&:hover {
 			color: black;
-			background: $blue;
+			background: $primary;
 			transition: all 0.5s ease;
 		}
 	}
