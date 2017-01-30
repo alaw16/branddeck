@@ -297,9 +297,7 @@ main {
   background: white; }
   main #adjectives {
     position: absolute;
-    left: 10%;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
+    left: calc(50% - 150px);
     width: 300px;
     bottom: 15vh;
     background: white;
@@ -632,7 +630,8 @@ main {
     box-shadow: none; }
     main #adjectives {
       width: 655px;
-      height: 350px; }
+      height: 350px;
+      left: calc(50% - 327px); }
       main #adjectives h1 {
         font-size: 2.5rem;
         letter-spacing: 0.08rem; }
