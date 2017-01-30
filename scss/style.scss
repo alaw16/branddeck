@@ -1,7 +1,9 @@
 $grey: white;
 $lgrey: #fafafb;
 $dgrey: #F7F7F7;
-$primary: black;
+$primary-color: black;
+$primary-font: 'larish';
+$secondary-font: 'apercu';
 
 @font-face {
   font-family: 'apercu';
@@ -15,21 +17,22 @@ $primary: black;
 }
 @font-face {
   font-family: 'larish';
-  src: url('../fonts/SuisseIntl-Bold.otf')  format('opentype');
-  font-weight: 900;
+  src: url('../fonts/larish.ttf')  format('truetype');
+  font-weight: 400;
 }
+
 
 
 body {
 	background: $grey;
-	color: $primary;
+	color: $primary-color;
 	user-select: none;
 	overflow:hidden;
 	scroll:auto;
-	font-family: 'Marcellus';
+	font-family: $primary-font;
 	a {
 		color: inherit;
-		font-family: 'Marcellus SC';
+		font-family: $primary-font;
 		&:hover {
 			color:#111;
 		}
@@ -38,10 +41,10 @@ body {
 	  width: 1px;
 	}
 	::-webkit-scrollbar-thumb {
-	  background: $primary;
+	  background: $primary-color;
 	}
 	/*::-webkit-scrollbar-thumb:hover {
-	  background: $primary;
+	  background: $primary-color;
 	}*/
 	/*::-webkit-scrollbar-thumb:active {
 	  background: #000000;
@@ -81,11 +84,11 @@ body {
 	top: calc(100% - 23px);
 	z-index: 5;
 	width: 100%;
-/*	border-right: 1px solid $primary;*/
+/*	border-right: 1px solid $primary-color;*/
 	height: 100vh;
 	background: $dgrey;
 	transition: all 1s ease;
-	color: $primary;
+	color: $primary-color;
 /*	#text {
 		width: 400px;
 		margin-left: calc(50% - 200px);
@@ -98,7 +101,7 @@ body {
 		padding: 0 10%;
 	}
 	h3 {
-		font-family: 'Marcellus SC';
+		font-family: $primary-font;
 		font-size: 19px;
 		margin-bottom: 3px;
 		margin-top: 27px;
@@ -122,7 +125,7 @@ body {
 		height: 20px;
 		background: $dgrey;
 		text-align: center;
-		color: $primary;
+		color: $primary-color;
 		font-size: 1rem;
 		padding: 4px 0 0 0;
 		cursor: pointer;
@@ -136,10 +139,10 @@ body {
 	bottom: 27px;
 	left: 27px;
 	border-radius: 50%;
-	border: 1px solid $primary;
+	border: 1px solid $primary-color;
 	padding: 1.5rem;
 	z-index: 6;
-	color: $primary;
+	color: $primary-color;
 	p {
 		font-size: 16px;
 		position: absolute;
@@ -151,7 +154,7 @@ body {
 		opacity: 0.8;
 	}
 	&:active {
-		background: $primary;
+		background: $primary-color;
 		color: white;
 	}
 }
@@ -161,15 +164,15 @@ nav {
 	position: fixed;
 	z-index: 6;
 	top: 0;
-/*	border-bottom: solid 1px $primary;*/
+/*	border-bottom: solid 1px $primary-color;*/
 	background: transparent;
-	color: $primary;
+	color: $primary-color;
 	h1 {
 		margin-top: 18px;
 		text-align: center;
 		font-size: 1.5rem;
-		font-family: 'Marcellus SC';
-		letter-spacing: 0.08rem;
+		font-family: $secondary-font;
+		letter-spacing: 0px;
 }
 	#help {
 		position: absolute;
@@ -204,10 +207,10 @@ nav {
 		overflow:hidden;
 /*		#smaller {
 			font-size: 1.5rem;
-			font-family: 'Marcellus';
+			font-family: $primary-font;
 		}*/
 		h2 {
-			font-family: 'Marcellus';
+			font-family: $primary-font;
 			text-align: center;
 			margin: 0px 0 40px 0;
 			font-size: 3rem;
@@ -231,7 +234,7 @@ nav {
 			user-select: text;
 			background: transparent;
 			border: none;
-			border-bottom: 2px solid $primary;
+			border-bottom: 2px solid $primary-color;
 			border-radius: 0;
 			width: 100%;
 			text-align: center;
@@ -249,19 +252,21 @@ nav {
 		}
 		button {
 			background: white;
-			color: $primary;
+			color: $primary-color;
 			text-transform: initial;
 			text-align: center;
 			letter-spacing: 0;
+			font-family: $secondary-font;
 			font-size: 1.5rem;
+			font-weight: 400;
 			width: 120px;
 			margin-left: calc(50% - 60px);
-			border:2px solid $primary;
+			border:2px solid $primary-color;
 			padding: 0 0 38px 0;
 		}
 		button:hover {
 			color: $grey;
-			background: $primary;
+			background: $primary-color;
 			transition: all 0.5s ease;
 		}
 	}
@@ -282,7 +287,7 @@ nav {
 			font-weight: bold;
 			margin-bottom: 25px;
 			letter-spacing: 1px;
-			border-bottom: 1px solid $primary;
+			border-bottom: 1px solid $primary-color;
 			padding: 0 0 5px 5px;
 			width: 70px;
 			margin: 0 auto;
@@ -290,7 +295,7 @@ nav {
 		ul {
 			height: 300px;
 			overflow-y:scroll;
-			color: $primary;
+			color: $primary-color;
 			overflow-x: hidden;
 			list-style-type: none;
 			font-size: 1.3rem;
@@ -333,7 +338,7 @@ main {
 		width: 300px;
 		bottom: 15vh;
 		background: white;
-		border: 1px solid $primary;
+		border: 1px solid $primary-color;
 		border-radius: 8px;
 		cursor: default;
 		#brandname {
@@ -342,25 +347,25 @@ main {
 			text-align: center;
 			margin-bottom: 0px;
 			line-height: 1.8;
-			color: $primary;
+			color: $primary-color;
 			margin-top: 10px;
 		}
 		p {
 			float:left;
 			width: 230px;
 			text-align: center;
-			font-weight: bold;
+			font-weight: normal;
 			text-align: center;
 			font-size: 3.2rem;
 			/*border-bottom: solid 3px;*/
 			margin: 0 20px 0 20px;
 			height: 48px;
-			color: $primary;
+			color: $primary-color;
 		}
 		#input{
 			max-width: 240px;
 			display: block;
-			color: $primary;
+			color: $primary-color;
 			position: absolute;
 			top:36%;
 			left: 50%;
@@ -369,9 +374,12 @@ main {
 			transition: all 0.2s linear;		
 		}
 		#input2{
+			font-family: $secondary-font;
+			font-size: 2rem;
+			font-weight: 400;
 			max-width: 240px;
 			display: block;
-			color: $primary;
+			color: $primary-color;
 			position: absolute;
 			top:36%;
 			left: 50%;
@@ -385,7 +393,7 @@ main {
 			}
 		}
 		.switchout {
-			color: $dgrey !important;
+			color: #d6dde5 !important;
 			position: absolute !important;
 			top:92% !important;
 			transition: all 0.2s linear;
@@ -485,7 +493,7 @@ main {
 			font-size: 32px;
 		}
 		h3 {
-			font-family: 'Marcellus SC';
+			font-family: $primary-font;
 			font-size: 23px;
 			margin-bottom: 3px;
 			margin-top: 27px;
@@ -502,7 +510,7 @@ main {
 			margin-bottom: 30px;
 		}
 		#swipeinfo {
-			color: $primary;
+			color: $primary-color;
 			font-style: italic;
 			position: absolute;
 			bottom: 65px;
@@ -517,7 +525,7 @@ main {
 	position: fixed;
 	z-index: 3;
 	#instruction-icon {
-		font-family: 'Marcellus SC';
+		font-family: $primary-font;
 		cursor: pointer;
 		position: absolute;
 		top: -35px;
@@ -527,7 +535,7 @@ main {
 		text-align: center;
 		font-size: 1.5rem;
 		letter-spacing: 1px;
-		border: solid 1px $primary;
+		border: solid 1px $primary-color;
 		border-bottom: 0;
 		background: $grey;
 /*		border-bottom: 50px solid $dgrey;
@@ -538,7 +546,7 @@ main {
 		padding: 5px 10px 29px 10px;
 		transition: top 1.5s ease;
 			&:active {
-				background: $primary;
+				background: $primary-color;
 				color: white;
 			}
 		span {
@@ -554,12 +562,12 @@ main {
 		left: 50%;
 		margin-right: -50%;
 		transform: translateX(-50%);
-		font-family: 'Marcellus SC';
+		font-family: $secondary-font;
 	}
 	ul {
-		color: $primary;
+		color: $primary-color;
 		padding: 35px 70px 0 70px;
-		border: 1px solid $primary;
+		border: 1px solid $primary-color;
 		list-style-type: none;
 		position: fixed;
 		z-index: 999;
@@ -642,7 +650,7 @@ main {
 		transform: translate(-50%,-50%);
 		margin-top: 0;
 		h2 {
-			font-family: 'Marcellus';
+			font-family: $primary-font;
 			text-align: center;
 			margin: 0px 0 40px 0;
 			font-size: 6rem;
@@ -662,7 +670,7 @@ main {
 			user-select: text;
 			background: transparent;
 			border: none;
-			border-bottom: 2px solid $primary;
+			border-bottom: 2px solid $primary-color;
 			width: calc(100% - 220px);
 			font-size: 3rem;
 			/*text-align: left;*/
@@ -676,7 +684,7 @@ main {
 			letter-spacing: 0rem;
 		}
 		button {
-			color: $primary;
+			color: $primary-color;
 			text-transform: initial;
 			text-align: center;
 			letter-spacing: 0;
@@ -684,7 +692,7 @@ main {
 			width: 170px;
 			margin-left: 0;
 			float: right;
-			border-color: $primary;
+			border-color: $primary-color;
 			padding-bottom: 39px;
 			transition: all 0.5s ease;
 		}
@@ -734,13 +742,15 @@ main {
 				transition: all 0.2s linear;		
 			}
 			#input2{
+				font-size: 2.5rem;
 				max-width: initial;
 				display: block;
 				position: absolute;
+				text-align: right;
 				top:17%;
-				left: 50%;
+				right: 12%;
 				margin-right: -50%;
-				transform: translate(-50%,0);
+				transform: translate(-50%,-60%);
 				transition: all 0.2s linear;
 			}
 			#flip {
@@ -815,17 +825,17 @@ main {
 		bottom: -10%;
 		left: 50%;
 		transform: translateX(-50%);
-		color: $primary;
+		color: $primary-color;
 		text-transform: initial;
 		text-align: center;
 		letter-spacing: 0;
 		font-size: 1.5rem;
 		width: 120px;
-		border:2px solid $primary;
+		border:2px solid $primary-color;
 		padding: 0 0 38px 0;
 		&:hover {
 			color: black;
-			background: $primary;
+			background: $primary-color;
 			transition: all 0.5s ease;
 		}
 	}

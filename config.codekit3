@@ -75,6 +75,12 @@
 		"oAP": "\/fonts\/larish-semibold.otf",
 		"oF": 0
 		},
+	"\/fonts\/larish.ttf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/larish.ttf",
+		"oF": 0
+		},
 	"\/images\/android-icon-144x144.png": {
 		"ft": 32768,
 		"iS": 6059,

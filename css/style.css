@@ -10,8 +10,8 @@
 
 @font-face {
   font-family: 'larish';
-  src: url("../fonts/SuisseIntl-Bold.otf") format("opentype");
-  font-weight: 900; }
+  src: url("../fonts/larish.ttf") format("truetype");
+  font-weight: 400; }
 
 body {
   background: white;
@@ -22,9 +22,9 @@ body {
           user-select: none;
   overflow: hidden;
   scroll: auto;
-  font-family: 'Marcellus';
+  font-family: "larish";
   /*::-webkit-scrollbar-thumb:hover {
-	  background: $primary;
+	  background: $primary-color;
 	}*/
   /*::-webkit-scrollbar-thumb:active {
 	  background: #000000;
@@ -34,7 +34,7 @@ body {
 	}*/ }
   body a {
     color: inherit;
-    font-family: 'Marcellus SC'; }
+    font-family: "larish"; }
     body a:hover {
       color: #111; }
   body ::-webkit-scrollbar {
@@ -70,7 +70,7 @@ body {
   top: calc(100% - 23px);
   z-index: 5;
   width: 100%;
-  /*	border-right: 1px solid $primary;*/
+  /*	border-right: 1px solid $primary-color;*/
   height: 100vh;
   background: #F7F7F7;
   -webkit-transition: all 1s ease;
@@ -87,7 +87,7 @@ body {
     margin-bottom: 7px;
     padding: 0 10%; }
   #about h3 {
-    font-family: 'Marcellus SC';
+    font-family: "larish";
     font-size: 19px;
     margin-bottom: 3px;
     margin-top: 27px;
@@ -143,15 +143,15 @@ nav {
   position: fixed;
   z-index: 6;
   top: 0;
-  /*	border-bottom: solid 1px $primary;*/
+  /*	border-bottom: solid 1px $primary-color;*/
   background: transparent;
   color: black; }
   nav h1 {
     margin-top: 18px;
     text-align: center;
     font-size: 1.5rem;
-    font-family: 'Marcellus SC';
-    letter-spacing: 0.08rem; }
+    font-family: "apercu";
+    letter-spacing: 0px; }
   nav #help {
     position: absolute;
     width: 20px;
@@ -185,10 +185,10 @@ nav {
     overflow: hidden;
     /*		#smaller {
 			font-size: 1.5rem;
-			font-family: 'Marcellus';
+			font-family: $primary-font;
 		}*/ }
     #intro #introtext h2 {
-      font-family: 'Marcellus';
+      font-family: "larish";
       text-align: center;
       margin: 0px 0 40px 0;
       font-size: 3rem;
@@ -229,7 +229,9 @@ nav {
       text-transform: initial;
       text-align: center;
       letter-spacing: 0;
+      font-family: "apercu";
       font-size: 1.5rem;
+      font-weight: 400;
       width: 120px;
       margin-left: calc(50% - 60px);
       border: 2px solid black;
@@ -316,7 +318,7 @@ main {
       float: left;
       width: 230px;
       text-align: center;
-      font-weight: bold;
+      font-weight: normal;
       text-align: center;
       font-size: 3.2rem;
       /*border-bottom: solid 3px;*/
@@ -336,6 +338,9 @@ main {
       -webkit-transition: all 0.2s linear;
       transition: all 0.2s linear; }
     main #adjectives #input2 {
+      font-family: "apercu";
+      font-size: 2rem;
+      font-weight: 400;
       max-width: 240px;
       display: block;
       color: black;
@@ -350,7 +355,7 @@ main {
     main #adjectives #flip:hover {
       cursor: pointer; }
     main #adjectives .switchout {
-      color: #F7F7F7 !important;
+      color: #d6dde5 !important;
       position: absolute !important;
       top: 92% !important;
       -webkit-transition: all 0.2s linear;
@@ -432,7 +437,7 @@ main {
       padding: 0;
       font-size: 32px; }
     #about h3 {
-      font-family: 'Marcellus SC';
+      font-family: "larish";
       font-size: 23px;
       margin-bottom: 3px;
       margin-top: 27px;
@@ -460,7 +465,7 @@ main {
     position: fixed;
     z-index: 3; }
     #instructions #instruction-icon {
-      font-family: 'Marcellus SC';
+      font-family: "larish";
       cursor: pointer;
       position: absolute;
       top: -35px;
@@ -497,7 +502,7 @@ main {
       margin-right: -50%;
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%);
-      font-family: 'Marcellus SC'; }
+      font-family: "apercu"; }
     #instructions ul {
       color: black;
       padding: 35px 70px 0 70px;
@@ -570,7 +575,7 @@ main {
             transform: translate(-50%, -50%);
     margin-top: 0; }
     #intro #introtext h2 {
-      font-family: 'Marcellus';
+      font-family: "larish";
       text-align: center;
       margin: 0px 0 40px 0;
       font-size: 6rem;
@@ -654,14 +659,16 @@ main {
         -webkit-transition: all 0.2s linear;
         transition: all 0.2s linear; }
       main #adjectives #input2 {
+        font-size: 2.5rem;
         max-width: initial;
         display: block;
         position: absolute;
+        text-align: right;
         top: 17%;
-        left: 50%;
+        right: 12%;
         margin-right: -50%;
-        -webkit-transform: translate(-50%, 0);
-                transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, -60%);
+                transform: translate(-50%, -60%);
         -webkit-transition: all 0.2s linear;
         transition: all 0.2s linear; }
       main #adjectives #flip:hover {
