@@ -162,7 +162,7 @@
             shadowDist[i] = Math.round(shadowInstance.getDistance() / shadowBlur);
 
             if (shadowInstance.getDistance() > 15) {
-                dropShadowText = "drop-shadow(" + shadowDist[i] * -Math.round(Math.cos(shadowInstance.getRadians()) * 10) / 20 + "px " + shadowDist[i] * Math.round(Math.sin(shadowInstance.getRadians()) * 10) / 20 + "px " + shadowDist[i]/2 + "px rgba(117,0,255,0.54))";
+                dropShadowText = "drop-shadow(" + shadowDist[i] * -Math.round(Math.cos(shadowInstance.getRadians()) * 10) / 20 + "px " + shadowDist[i] * Math.round(Math.sin(shadowInstance.getRadians()) * 10) / 20 + "px " + 0 + "px rgba(0,0,0,1))";
                 shadowInstanceStyle.webkitFilter = dropShadowText;
                 shadowInstanceStyle.filter = dropShadowText;
             } else {

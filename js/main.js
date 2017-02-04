@@ -229,10 +229,10 @@ $("body").on('keyup', function(e) {
 $("#start").on('click', function() {
 	var input = $('#introtext input').val();
 	if (input.length > 0) {
-	$('#brandname').append('<span>' + input + '<i> is</i>' + '</span>').text();
+	$('#brandname').append('<span>' + input + ' is' + '</span>').text();
 	$('#intro').fadeOut(500);
 	} else {
-	$('#brandname').append('<span>' + input + '<i> is</i>' + '</span>').text();
+	$('#brandname').append('<span>' + input + ' is' + '</span>').text();
 	$('#intro').fadeOut(500);
 	$('#brandname').css('color', '#fff');
 	}
@@ -243,10 +243,10 @@ $(document).keypress(function(e) {
     	$('#start').css('background','white').css('color','#111');
         var input = $('#introtext input').val();
 		if (input.length > 0) {
-			$('#brandname').append('<span>' + input + '<i> is</i>' + '</span>').text();
+			$('#brandname').append('<span>' + input + ' is' + '</span>').text();
 			$('#intro').fadeOut(500);
 			} else {
-			$('#brandname').append('<span>' + input + '<i> is</i>' + '</span>').text();
+			$('#brandname').append('<span>' + input + ' is' + '</span>').text();
 			$('#intro').fadeOut(500);
 			$('#brandname').css('color', '#fff');
 		}
