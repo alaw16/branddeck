@@ -178,9 +178,9 @@
         /* Perspective effect definitions */
         for (i = 0; i < spotPerspectiveInstance.length; i += 1) {
             var distValue = 200000 / spotPerspectiveInstance[i].getDistance();
-            var perspectiveX = Math.sin(spotPerspectiveInstance[i].getRadians()) * 1;
-            var perspectiveY = -Math.abs(spotPerspectiveInstance[i].getRadians()) * 1 + 0;
-            spotPerspectiveInstance[i].elem.style.transform = "perspective(" + distValue + "px) rotateX(" + perspectiveX + "deg) " + "rotateY(" + perspectiveY + "deg)";
+            var perspectiveX = Math.sin(spotPerspectiveInstance[i].getRadians()) * 20;
+            var perspectiveY = -Math.abs(spotPerspectiveInstance[i].getRadians()) * 20 + 30;
+            spotPerspectiveInstance[i].elem.style.transform = "perspective(" + distValue + "px) rotateX(" + perspectiveX/20 + "deg) " + "rotateY(" + perspectiveY/20 + "deg)";
         }
     }
 
